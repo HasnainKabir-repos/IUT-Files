@@ -1,0 +1,5 @@
+Name,Address,Salary
+Hasnain Kabir,Madartek,4500
+Zayed,Mohammadpur,8500
+Mamunur,Dhanmondi,10000
+Shoumik,Dhamnmondi,20000
