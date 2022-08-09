@@ -8,6 +8,24 @@ typedef struct{
     int salary;
 } index;
 
+void outputf(index indexes[], int len){
+    FILE *outfile;
+
+    outfile = fopen("output1.txt", "w");
+
+    if(outfile == NULL)
+   {
+      printf("Error!");
+      exit(1);
+   }
+
+    fprintf(outfile, "Name\t\tAddress\t\tBlood Group\t\tSalary\n");
+
+    for(int i=0;i<len;i++){
+        fprintf(outfile, "%s\t\t%s\t\t%s\t\t%d\n", indexes[i].name, indexes[i].address, indexes[i].blood, indexes[i].salary);
+    }
+    fclose(outfile);
+}
 
 int main(){
 
@@ -22,6 +40,7 @@ int main(){
     int row =0;
     int i = 0;
 
+    int len=0;
 
     char *item;
 
@@ -30,7 +49,6 @@ int main(){
             row++;
             continue;
         }
-        //printf("%s", line);
 
         item = strtok(line,",");
         strcpy(indexes[i].name, item);
@@ -41,6 +59,7 @@ int main(){
         item = strtok(NULL,"\n");
         strcpy(indexes[i].blood, item);
         i++;
+        len++;
     }
 
     fclose(flpt);
@@ -71,4 +90,7 @@ int main(){
         printf("%d\n", indexes[i].salary);
     }
     fclose(flpt);
+
+    outputf(indexes,len);
+
 }
