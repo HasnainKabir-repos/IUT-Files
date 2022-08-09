@@ -1,0 +1,11 @@
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\bin\Debug\User_management_system.exe.config
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\bin\Debug\User_management_system.exe
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\bin\Debug\User_management_system.pdb
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.csproj.AssemblyReference.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.csproj.SuggestedBindingRedirects.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.Form1.resources
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.Properties.Resources.resources
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.csproj.GenerateResource.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.csproj.CoreCompileInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.exe
+C:\Users\CSE\Desktop\200042102_OOC\Lab 10\User_management_system\obj\Debug\User_management_system.pdb

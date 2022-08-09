@@ -1,0 +1,21 @@
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\bin\Debug\Lab final 102.exe.config
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\bin\Debug\Lab final 102.exe
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\bin\Debug\Lab final 102.pdb
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\obj\Debug\Lab final 102.csproj.AssemblyReference.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\obj\Debug\Lab_final_102.Form1.resources
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\obj\Debug\Lab_final_102.Properties.Resources.resources
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\obj\Debug\Lab final 102.csproj.GenerateResource.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\obj\Debug\Lab final 102.csproj.CoreCompileInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\obj\Debug\Lab final 102.exe
+C:\Users\CSE\Desktop\200042102_OOC\Lab final 102\Lab final 102\obj\Debug\Lab final 102.pdb
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\bin\Debug\Lab final 102.exe.config
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\bin\Debug\Lab final 102.exe
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\bin\Debug\Lab final 102.pdb
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab final 102.csproj.AssemblyReference.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab final 102.csproj.SuggestedBindingRedirects.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab_final_102.Form1.resources
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab_final_102.Properties.Resources.resources
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab final 102.csproj.GenerateResource.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab final 102.csproj.CoreCompileInputs.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab final 102.exe
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab final 102\Lab final 102\obj\Debug\Lab final 102.pdb

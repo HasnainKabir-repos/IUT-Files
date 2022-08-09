@@ -1,0 +1,11 @@
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\bin\Debug\Pharmacy_management_102.exe.config
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\bin\Debug\Pharmacy_management_102.exe
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\bin\Debug\Pharmacy_management_102.pdb
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.csproj.AssemblyReference.cache
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.csproj.SuggestedBindingRedirects.cache
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.Form1.resources
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.Properties.Resources.resources
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.csproj.GenerateResource.cache
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.csproj.CoreCompileInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.exe
+C:\Users\CSE\Desktop\200042102_OOC\Pharmacy_management_102\obj\Debug\Pharmacy_management_102.pdb

@@ -1,0 +1,30 @@
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\bin\Debug\net6.0\Task_2.exe
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\bin\Debug\net6.0\Task_2.deps.json
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\bin\Debug\net6.0\Task_2.runtimeconfig.json
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\bin\Debug\net6.0\Task_2.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\bin\Debug\net6.0\ref\Task_2.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\bin\Debug\net6.0\Task_2.pdb
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.csproj.AssemblyReference.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.AssemblyInfoInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.AssemblyInfo.cs
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.csproj.CoreCompileInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\ref\Task_2.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.pdb
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_2\obj\Debug\net6.0\Task_2.genruntimeconfig.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\bin\Debug\net6.0\Task_2.exe
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\bin\Debug\net6.0\Task_2.deps.json
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\bin\Debug\net6.0\Task_2.runtimeconfig.json
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\bin\Debug\net6.0\Task_2.dll
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\bin\Debug\net6.0\ref\Task_2.dll
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\bin\Debug\net6.0\Task_2.pdb
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.csproj.AssemblyReference.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.GeneratedMSBuildEditorConfig.editorconfig
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.AssemblyInfoInputs.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.AssemblyInfo.cs
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.csproj.CoreCompileInputs.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.dll
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\ref\Task_2.dll
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.pdb
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 09\Task_2\obj\Debug\net6.0\Task_2.genruntimeconfig.cache

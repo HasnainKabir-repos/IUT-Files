@@ -1,0 +1,15 @@
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.csproj.AssemblyReference.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.AssemblyInfoInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.AssemblyInfo.cs
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.csproj.CoreCompileInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\bin\Debug\net6.0\Task_1.exe
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\bin\Debug\net6.0\Task_1.deps.json
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\bin\Debug\net6.0\Task_1.runtimeconfig.json
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\bin\Debug\net6.0\Task_1.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\bin\Debug\net6.0\ref\Task_1.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\bin\Debug\net6.0\Task_1.pdb
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\ref\Task_1.dll
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.pdb
+C:\Users\CSE\Desktop\200042102_OOC\Lab 09\Task_1\obj\Debug\net6.0\Task_1.genruntimeconfig.cache

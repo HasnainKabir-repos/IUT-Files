@@ -1,0 +1,22 @@
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\bin\Debug\IUT_LMS_02.exe.config
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\bin\Debug\IUT_LMS_02.exe
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\bin\Debug\IUT_LMS_02.pdb
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.AssemblyReference.cache
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.SuggestedBindingRedirects.cache
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.Form1.resources
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.Properties.Resources.resources
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.GenerateResource.cache
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.CoreCompileInputs.cache
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.exe
+C:\Users\CSE\Desktop\200042102_OOC\IUT_LMS_02\obj\Debug\IUT_LMS_02.pdb
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\bin\Debug\IUT_LMS_02.exe.config
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\bin\Debug\IUT_LMS_02.exe
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\bin\Debug\IUT_LMS_02.pdb
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.AssemblyReference.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.SuggestedBindingRedirects.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.Form1.resources
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.Properties.Resources.resources
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.GenerateResource.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.csproj.CoreCompileInputs.cache
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.exe
+F:\IUT\CSE 4201 OOC\OOC-projects\Lab 7\IUT_LMS_02\obj\Debug\IUT_LMS_02.pdb

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "99a6e223-5407-4a8c-abd3-69898c24b953": {
+      "ProjectGuid": "99a6e223-5407-4a8c-abd3-69898c24b953",
+      "DisplayName": "Car_Rental_dependency",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
