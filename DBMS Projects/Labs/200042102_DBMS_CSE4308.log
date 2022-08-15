@@ -1,0 +1,92 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.14)  15 AUG 2022 00:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**200042102_DBMS_CSE4308.tex
+(./200042102_DBMS_CSE4308.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-05>
+(f:/Installation folder/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(f:/Installation folder/texlive/2022/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(f:/Installation folder/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+)
+(f:/Installation folder/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-p
+dftex.def
+File: l3backend-pdftex.def 2022-08-05 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count193
+\l__pdf_internal_box=\box51
+)
+
+LaTeX Warning: Unused global option(s):
+    [left,right].
+
+(./200042102_DBMS_CSE4308.aux)
+\openout1 = `200042102_DBMS_CSE4308.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+[1
+
+{f:/Installation folder/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.m
+ap}] [2] (./200042102_DBMS_CSE4308.aux) ) 
+Here is how much of TeX's memory you used:
+ 477 strings out of 478792
+ 9516 string characters out of 5847088
+ 311222 words of memory out of 5000000
+ 19175 multiletter control sequences out of 15000+600000
+ 473054 words of font info for 40 fonts, out of 8000000 for 9000
+ 430 hyphenation exceptions out of 8191
+ 33i,7n,38p,582b,284s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<f:/Installation folder/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f:/Installation folder/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><f:/Installati
+on folder/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/
+Installation folder/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb><f:/Installation folder/texlive/2022/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti12.pfb>
+Output written on 200042102_DBMS_CSE4308.pdf (2 pages, 71120 bytes).
+PDF statistics:
+ 36 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
