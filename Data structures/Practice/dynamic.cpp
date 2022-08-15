@@ -5,7 +5,7 @@ using namespace std;
 class DynamicArray{
 
 private:
-    int* arr;
+    int* arr ;
     int values;
     int capacity = 2;
 
@@ -16,9 +16,8 @@ public:
         values = 0;
     }
 
-
     void pushBack(int x){
-        values++;
+        ++values;
 
         if(values>checksize()){
            Resize();
@@ -29,15 +28,19 @@ public:
 
 
     void increasesize(){
-        capacity *= 2;
+        capacity = capacity* 2;
     }
 
     int checksize(){
         return capacity;
     }
 
-    int &operator[](int j){
-        return arr[j];
+    int &operator[](int k){
+        return arr[k];
+    }
+
+    int size(){
+        return (sizeof(arr)/sizeof(arr[0]));
     }
 
     void Resize(){
@@ -45,7 +48,7 @@ public:
         int s = checksize();
         int* res_arr = new int[s];
 
-        for(int i=0;i<checksize();i++){
+        for(int i=0;i<size();i++){
             res_arr[i] = arr[i];
         }
 
@@ -58,9 +61,9 @@ public:
 int main(){
 
     DynamicArray arr;
-    for(int j=0;j<10;j++){
-        arr.pushBack(j);
-    }
-    printf("%d ", arr[0]);
+    arr.pushBack(1);
+    arr.pushBack(2);
+    arr.pushBack(3);
+    printf("%d", arr[0]);
 
 }
