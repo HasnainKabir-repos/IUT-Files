@@ -17,13 +17,14 @@ public:
     }
 
     void pushBack(int x){
-        ++values;
 
-        if(values>checksize()){
+        values++;
+        if(values+1>checksize()){
            Resize();
         }
 
         arr[values-1] = x;
+
     }
 
 
@@ -61,9 +62,9 @@ public:
 int main(){
 
     DynamicArray arr;
-    arr.pushBack(1);
-    arr.pushBack(2);
-    arr.pushBack(3);
-    printf("%d", arr[0]);
+    for(int i=0;i<10;i++){
+        arr.pushBack(i);
+        printf("%d ", arr[i]);
+    }
 
 }
