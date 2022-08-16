@@ -62,9 +62,16 @@ public:
 int main(){
 
     DynamicArray arr;
-    for(int i=0;i<10;i++){
-        arr.pushBack(i);
-        printf("%d ", arr[i]);
+
+    string n;
+    cin>>n;
+    for(int i=0;i<n.size();i++){
+        int f=n[i]-'0';
+        arr.pushBack(f);
+    }
+
+    for(int j=0;j<arr.size();j++){
+        cout<<arr[j]<<" ";
     }
 
 }
