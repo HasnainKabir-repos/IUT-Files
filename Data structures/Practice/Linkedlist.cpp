@@ -32,7 +32,7 @@ public:
     void push_back(int x){
         Node* node = new Node();
         node->key = x;
-        node->next = NULL;
+       // node->next = NULL;
 
         Node* temp = head;
         while(temp->next!=NULL){
