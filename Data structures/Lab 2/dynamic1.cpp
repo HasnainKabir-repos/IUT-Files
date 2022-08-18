@@ -79,6 +79,50 @@ public:
         delete[] res_arr;
     }
 
+    void Reverse(){
+        int s = Capacity();
+        int* rev_arr = new int[s];
+        int n = Get_Size();
+
+        for(int i=0;i<n;i++){
+            rev_arr[i] = arr[n-i-1];
+        }
+
+        arr = rev_arr;
+        delete[] rev_arr;
+    }
+
+//    void leftShift(int val){
+//        int n = Get_Size();
+//
+//        int i=0;
+//        for(i=0;i<n;i++){
+//            if(arr[i] == val){
+//                break;
+//            }
+//        }
+//
+//        if(i!=n-1){
+//            n = n-1;
+//            for(int j=i;j<n-1;j++){
+//                arr[j] = arr[j+1];
+//            }
+//        }
+//    }
+
+//    void deleteElement(int val){
+//
+//        int occurrence = 0;
+//        for(int i=0;i<Get_Size();i++){
+//            if(arr[i] == val){
+//                occurrence++;
+//            }
+//        }
+//        for(int i=0;i<occurrence;i++){
+//            leftShift(val);
+//        }
+//    }
+
 };
 
 int main(){
@@ -93,4 +137,10 @@ int main(){
     {
         cout << arr.Get(i)<<endl;
     }
+    arr.Reverse();
+    for(int i = 0; i < arr.Get_Size();i++)
+    {
+        cout << arr.Get(i)<<" ";
+    }
+
 }
