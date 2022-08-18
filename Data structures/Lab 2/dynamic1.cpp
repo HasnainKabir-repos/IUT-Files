@@ -92,36 +92,36 @@ public:
         delete[] rev_arr;
     }
 
-//    void leftShift(int val){
-//        int n = Get_Size();
-//
-//        int i=0;
-//        for(i=0;i<n;i++){
-//            if(arr[i] == val){
-//                break;
-//            }
-//        }
-//
-//        if(i!=n-1){
-//            n = n-1;
-//            for(int j=i;j<n-1;j++){
-//                arr[j] = arr[j+1];
-//            }
-//        }
-//    }
+    void leftShift(int val){
+        int n = Get_Size();
 
-//    void deleteElement(int val){
-//
-//        int occurrence = 0;
-//        for(int i=0;i<Get_Size();i++){
-//            if(arr[i] == val){
-//                occurrence++;
-//            }
-//        }
-//        for(int i=0;i<occurrence;i++){
-//            leftShift(val);
-//        }
-//    }
+        int i=0;
+        for(i=0;i<n;i++){
+            if(arr[i] == val){
+                break;
+            }
+        }
+
+        if(i!=n-1){
+            n = n-1;
+            for(int j=i;j<n-1;j++){
+                arr[j] = arr[j+1];
+            }
+        }
+    }
+
+    void deleteElement(int val){
+
+        int occurrence = 0;
+        for(int i=0;i<Get_Size();i++){
+            if(arr[i] == val){
+                occurrence++;
+            }
+        }
+        for(int i=0;i<occurrence;i++){
+            leftShift(val);
+        }
+    }
 
 };
 
@@ -137,10 +137,24 @@ int main(){
     {
         cout << arr.Get(i)<<endl;
     }
+
     arr.Reverse();
     for(int i = 0; i < arr.Get_Size();i++)
     {
         cout << arr.Get(i)<<" ";
     }
+//    cout<<endl;
+    DynamicArray arr2;
+    arr2.PushBack(2);
+    arr2.PushBack(3);
+    arr2.PushBack(3);
+    arr2.PushBack(2);
 
+    arr2.deleteElement(2);
+
+    for(int i = 0; i < arr2.Get_Size();i++)
+    {
+        cout << arr2.Get(i)<<" ";
+    }
 }
+

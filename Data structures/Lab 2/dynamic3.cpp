@@ -91,7 +91,6 @@ public:
         arr = rev_arr;
         delete[] rev_arr;
     }
-
     void leftShift(int val){
         int n = Get_Size();
 
@@ -120,40 +119,28 @@ public:
         }
         for(int i=0;i<occurrence;i++){
             leftShift(val);
+            arr[Get_Size()-i-1] = 123456;
         }
     }
-
 };
 
 int main(){
+    DynamicArray arr1;
+    string n;
+    cin>>n;
 
-    DynamicArray arr;
-    for(int i =0;i<16;i++)
-    {
-        arr.PushBack(100 + i);
+    for(int i=0;i<n.size();i++){
+        arr1.PushBack(n[i] - '0');
     }
 
-    for(int i = 0; i < arr.Get_Size();i++)
-    {
-        cout << arr.Get(i)<<endl;
+    for(int i=0;i<arr1.Get_Size();i++){
+        cout<<arr1[i]<<" ";
     }
 
-    arr.Reverse();
-    for(int i = 0; i < arr.Get_Size();i++)
-    {
-        cout << arr.Get(i)<<" ";
+    arr1.deleteElement(2);
+    cout<<endl;
+    for(int i=0;i<arr1.Get_Size();i++){
+        cout<<arr1[i]<<" ";
     }
-//    cout<<endl;
-//    DynamicArray arr2;
-//    arr2.PushBack(2);
-//    arr2.PushBack(3);
-//    arr2.PushBack(3);
-//    arr2.PushBack(2);
-//
-//    arr2.deleteElement(2);
-//
-//    for(int i = 0; i < arr2.Get_Size();i++)
-//    {
-//        cout << arr2.Get(i)<<" ";
-//    }
 }
+
