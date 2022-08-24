@@ -2,59 +2,91 @@
 
 using namespace std;
 
-class Node{
+class Node
+{
 public:
     int key;
     Node* next;
 
 };
 
-class LinkedList{
+class LinkedList
+{
 public:
-    Node* head;
+    Node* head, *tail;
 
-    LinkedList(){
+    LinkedList()
+    {
         head = NULL;
+        tail = NULL;
     }
 
-    void push_front(int x){
+    void push_front(int x)
+    {
         Node* node = new Node();
         node->key = x;
 
-        if(head==NULL){
+        if(head==NULL)
+        {
             head=node;
-        }else{
+            tail = node;
+        }
+        else
+        {
             node->next = head;
             head = node;
         }
     }
 
-    void push_back(int x){
+    void push_back(int x)
+    {
         Node* node = new Node();
         node->key = x;
-       // node->next = NULL;
+        if(head==NULL)
+        {
+            head=node;
+            tail = node;
+        }
+        else
+        {
+            tail->next = node;
+            tail = node;
 
+        }
+//        tail->next = node;
+//        tail = node;
+        // node->next = NULL;
+
+//        Node* temp = head;
+//        while(temp->next!=NULL)
+//        {
+//            temp = temp->next;
+//        }
+//
+//        temp->next = node;
+    }
+
+    void displayAll()
+    {
         Node* temp = head;
-        while(temp->next!=NULL){
+        while(temp!=NULL)
+        {
+            cout<<temp->key<<" ";
             temp = temp->next;
         }
-
-        temp->next = node;
+        cout << endl;
     }
 };
 
-int main(){
+int main()
+{
 
     LinkedList l;
-    l.push_front(11);
-    l.push_front(10);
     l.push_back(12);
-
-    while(l.head!=NULL){
-        cout<<l.head->key<<" ";
-        l.head = l.head->next;
-    }
-
+    l.push_back(13);
+    l.push_front(11);
+    l.displayAll();
+    cout << l.tail->key;
 //    Node* head;
 //    Node* one;
 //    Node* two;
