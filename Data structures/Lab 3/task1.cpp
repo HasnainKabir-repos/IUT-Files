@@ -26,16 +26,8 @@ public:
         Node* node = new Node();
         node->key = x;
 
-        if(head==NULL)
-        {
-            head=node;
-            tail = node;
-        }
-        else
-        {
-            node->next = head;
-            head = node;
-        }
+        node->next = head;
+        head=node;
     }
 
     void push_back(int x)
@@ -53,17 +45,7 @@ public:
             tail = node;
 
         }
-//        tail->next = node;
-//        tail = node;
-        // node->next = NULL;
 
-//        Node* temp = head;
-//        while(temp->next!=NULL)
-//        {
-//            temp = temp->next;
-//        }
-//
-//        temp->next = node;
     }
 
     void displayAll()
@@ -76,33 +58,49 @@ public:
         }
         cout << endl;
     }
+
+    void Reverse()
+    {
+
+        Node* prev = nullptr;
+        Node* curr = head;
+        while (curr) {
+            Node* nextTemp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        tail = head;
+        head = prev;
+
+    }
+
+    void popback(){
+        Node* temp = head;
+        while(temp->next->next!=NULL){
+            temp=temp->next;
+        }
+        temp->next = NULL;
+        tail = temp;
+        delete(temp);
+    }
 };
 
 int main()
 {
 
     LinkedList l;
-    l.push_back(12);
-    l.push_back(13);
-    l.push_front(11);
+//    l.push_back(12);
+//    l.push_back(13);
+//    l.push_front(11);
+    l.push_front(10);
     l.displayAll();
-    cout << l.tail->key;
-//    Node* head;
-//    Node* one;
-//    Node* two;
-//
-//    one = new Node();
-//    two = new Node();
-//
-//    one->key = 1;
-//    two->key = 2;
-//
-//    one->next = two;
-//    two->next = NULL;
-//    head = one;
-//
-//    while (head != NULL) {
-//        cout << head->key<<" ";
-//        head = head->next;
-//  }
+    //cout << l.tail->key<<endl;
+    //l.Reverse();
+    cout<<endl;
+    l.popback();
+    //l.popback();
+    l.displayAll();
+
 }
+
