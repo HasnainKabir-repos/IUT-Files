@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{k}{DISTINCT}\PYG{p}{(}\PYG{n}{DEPT\PYGZus{}NAME}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{INSTRUCTOR}\PYG{p}{;}
+\end{Verbatim}
