@@ -28,8 +28,10 @@ public:
             back++;
             a[back] = x;
         }
+    }
 
-
+    int size(){
+        return n;
     }
 
     void Dequeue(){
@@ -37,15 +39,28 @@ public:
             cout<<"No more elements in queue"<<endl;
             return;
         }
-        else if(front !=-1){
-            front++;
+        else{
+            if(front == back){
+                back = -1;
+                front = -1;
+            }
+            else{
+                front++;
+            }
         }
-
     }
 
-    bool Empty(){
+    bool isEmpty(){
         if(front==-1 || front>back){
 
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+    bool isFull(){
+        if(front == 0 && back == n-1){
             return 1;
         }else{
             return 0;
@@ -63,13 +78,15 @@ public:
 
 int main(){
     Queue queue = Queue(5);
-
+    cout<<queue.isEmpty()<<endl;
     queue.Enqueue(2);
     queue.Enqueue(3);
     queue.Enqueue(4);
     queue.Enqueue(5);
-
+    queue.Enqueue(6);
+    cout<<queue.isFull()<<endl;
     queue.Dequeue();
+    cout<<queue.isFull()<<endl;
 
     queue.DisplayAll();
 
