@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Student}\PYG{p}{\PYGZob{}}
+\PYG{k}{public}\PYG{o}{:}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{gpa}\PYG{o}{=}\PYG{l+m+mf}{0.00}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{semester}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{()\PYGZob{}}
+
+\PYG{+w}{    }\PYG{n}{Student}\PYG{+w}{ }\PYG{n}{students}\PYG{p}{[}\PYG{l+m+mi}{100}\PYG{p}{];}
+
+\PYG{+w}{    }\PYG{k+kt}{FILE}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{fp}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{fp}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}grades.txt\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k+kt}{char}\PYG{+w}{ }\PYG{n}{buffer}\PYG{p}{[}\PYG{l+m+mi}{160}\PYG{p}{];}
+
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{count}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{while}\PYG{p}{(}\PYG{n}{fgets}\PYG{p}{(}\PYG{n}{buffer}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{159}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fp}\PYG{p}{))\PYGZob{}}
+
+\PYG{+w}{        }\PYG{n}{sscanf}\PYG{p}{(}\PYG{n}{buffer}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZpc{}d;\PYGZpc{}lf;\PYGZpc{}d\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{students}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{id}\PYG{p}{,}
+\PYG{+w}{        }\PYG{o}{\PYGZam{}}\PYG{n}{students}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{gpa}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{students}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{semester}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{count}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{i}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{//printf(\PYGZdq{}\PYGZpc{}d\PYGZdq{}, count);}
+
+\PYG{+w}{    }\PYG{n}{fclose}\PYG{p}{(}\PYG{n}{fp}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{total}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.00f}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{count}\PYG{p}{;}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{total}\PYG{o}{+=}\PYG{+w}{ }\PYG{n}{students}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{gpa}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{average}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{total}\PYG{o}{/}\PYG{p}{(}\PYG{n}{count}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Average gpa is: \PYGZpc{}lf\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{average}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

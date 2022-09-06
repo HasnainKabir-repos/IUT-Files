@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{USER}\PYG{+w}{ }\PYG{n}{Nibir}\PYG{+w}{ }\PYG{n}{IDENTIFIED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{nibir}\PYG{+w}{ }\PYG{p}{;}
+
+\end{Verbatim}

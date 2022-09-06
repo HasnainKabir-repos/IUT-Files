@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{INSTRUCTOR}\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{ID}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{NAME}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{DEPT\PYGZus{}NAME}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{SALARY}\PYG{+w}{ }\PYG{n+nb}{INT}
+\PYG{p}{);}
+\end{Verbatim}

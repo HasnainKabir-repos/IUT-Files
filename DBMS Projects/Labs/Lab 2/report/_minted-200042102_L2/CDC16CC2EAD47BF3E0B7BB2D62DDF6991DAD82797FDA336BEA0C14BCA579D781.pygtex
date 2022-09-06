@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{NAME}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{DEPT\PYGZus{}NAME}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{INSTRUCTOR}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{SALARY}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{10000}\PYG{+w}{ }\PYG{k}{AND}\PYG{+w}{ }\PYG{n}{SALARY}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{80000}\PYG{p}{;}
+\end{Verbatim}
