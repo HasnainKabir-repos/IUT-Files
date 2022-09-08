@@ -15,3 +15,5 @@ const fs = require('fs');
 
 //process - info about where the program is being executed
 console.log(process);
+
+// In javascript, functions are also variables
