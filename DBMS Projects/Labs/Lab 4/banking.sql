@@ -118,6 +118,7 @@ insert into borrower values ('Smith',	'L-21');
 
 commit;
 
+--1
 SELECT distinct depositor.customer_name FROM depositor,borrower 
 WHERE depositor.customer_name = borrower.customer_name;
 
@@ -125,6 +126,7 @@ SELECT customer_name FROM depositor
 INTERSECT 
 SELECT customer_name FROM borrower;
 
+--2
 SELECT distinct customer.customer_name,customer_city,customer_street 
 FROM customer,depositor,borrower
 WHERE customer.customer_name = depositor.customer_name OR
@@ -136,10 +138,14 @@ UNION
 SELECT customer.customer_name,customer_street,customer_city FROM customer,depositor
 WHERE customer.customer_name = depositor.customer_name;
 
-SELECT distinct customer.customer_name, customer_city 
+--3
+SELECT distinct customer.customer_name, customer_city
 FROM customer,borrower,depositor
 WHERE customer.customer_name = borrower.customer_name AND
-customer.customer_name != depositor.customer_name ;
+customer.customer_name NOT IN (
+SELECT distinct customer.customer_name 
+FROM customer,borrower,depositor
+WHERE customer.customer_name = borrower.customer_name AND customer.customer_name = depositor.customer_name);
 
 SELECT distinct customer.customer_name, customer_city
 FROM customer, borrower
@@ -149,32 +155,74 @@ SELECT distinct customer.customer_name, customer_city
 FROM customer, depositor
 WHERE customer.customer_name = depositor.customer_name;
 
+--4
 SELECT sum(assets) FROM branch;
 
+--5
 SELECT branch_city,count(account_number) FROM branch,
 account WHERE account.branch_name = branch.branch_name
 GROUP BY branch_city;
 
+--6
 SELECT  branch_name,avg(balance) FROM account
 GROUP BY branch_name ORDER BY avg(balance) DESC;
 
+--7
 SELECT branch_city,sum(balance) FROM account, 
 branch WHERE branch.branch_name = account.branch_name
 GROUP BY branch_city;
 
+
+
+--8
 SELECT loan.branch_name, avg(amount) FROM loan
 ,branch WHERE branch.branch_name = loan.branch_name AND
 branch_city != 'Horseneck'
 GROUP BY loan.branch_name;
 
-SELECT loan.branch_name, avg(amount) FROM loan
-,branch WHERE branch_city != 'Horseneck'
-GROUP BY loan.branch_name
-HAVING  branch.branch_name = loan.branch_name;
+SELECT avg(amount), max(branch.branch_name)
+FROM branch,loan
+WHERE branch.branch_name=loan.branch_name
+GROUP BY branch.branch_city
+HAVING branch.branch_city!='Horseneck';
 
-SELECT customer.customer_name, account.account_number
-, max(balance) FROM
-customer, depositor, account WHERE depositor.account_number
-= account.account_number
-GROUP BY account.account_number;
 
+--9
+SELECT customer_name, account.account_number FROM
+ depositor, account WHERE depositor.account_number
+= account.account_number AND account.balance IN (SELECT max(balance)
+FROM account);
+
+SELECT customer_name, account.account_number FROM
+ depositor, account WHERE depositor.account_number
+= account.account_number AND account.balance = all (SELECT max(balance)
+FROM account);
+
+
+--10
+SELECT distinct c.customer_name, c.customer_city, c.customer_street
+FROM customer c, branch b, account a,depositor d
+WHERE c.customer_city = b.branch_city
+AND d.account_number = a.account_number 
+AND d.customer_name = c.customer_name AND a.branch_name = b.branch_name;
+
+--11
+SELECT branch_city, avg(amount) FROM branch b, loan l
+WHERE b.branch_name = l.branch_name 
+GROUP BY branch_city 
+HAVING avg(amount) > 1500;
+
+SELECT * FROM 
+(SELECT branch_city, avg(amount) as av FROM branch b, loan l WHERE b.branch_name = l.branch_name 
+GROUP BY branch_city)A WHERE A.av>1500;
+
+--12
+SELECT distinct b.branch_name FROM branch b, account a 
+WHERE b.branch_name = a.branch_name GROUP BY
+b.branch_name HAVING sum(balance) > avg(balance);
+
+--13
+SELECT  d.customer_name, max(a.balance), min(l.amount) FROM depositor d,account a, borrower b, loan l 
+WHERE d.customer_name = b.customer_name AND d.account_number = a.account_number
+AND b.loan_number = l.loan_number GROUP BY (d.customer_name)
+HAVING sum(balance) > min(amount);
