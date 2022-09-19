@@ -84,4 +84,8 @@ int main(){
     i++;
     heap.display(arr, i);
 
+    heap.Min_heap_insert(47, arr, i);
+    i++;
+    heap.display(arr, i);
+
 }
