@@ -77,15 +77,15 @@ int main(){
     heap.display(arr, i);
     cout<<heap.heap_minimum(arr)<<endl;
 
-    cout<<heap.heap_extract_min(arr, i)<<endl;
-    i--;
+    cout<<heap.heap_extract_min(arr, i--)<<endl;
+
     heap.display(arr, i);
-    heap.Min_heap_insert(45, arr, i);
-    i++;
+    heap.Min_heap_insert(45, arr, i++);
+
     heap.display(arr, i);
 
-    heap.Min_heap_insert(47, arr, i);
-    i++;
+    heap.Min_heap_insert(47, arr, i++);
+
     heap.display(arr, i);
 
 }
