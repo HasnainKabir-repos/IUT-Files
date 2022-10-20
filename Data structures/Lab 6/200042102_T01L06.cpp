@@ -51,7 +51,7 @@ public:
                 prev = temp;
                 temp = temp->left;
             }
-            else //if (temp->val < key)
+            else
             {
                 prev = temp;
                 temp = temp->right;
