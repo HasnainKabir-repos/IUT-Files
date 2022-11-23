@@ -27,7 +27,7 @@ int main(){
         if(p == t){
             for(j= 0;j<m;j++){
                 if(text[i+j] != pattern[j]){
-                    cout<<"-1"<<endl;
+
                     break;
                 }
             }
