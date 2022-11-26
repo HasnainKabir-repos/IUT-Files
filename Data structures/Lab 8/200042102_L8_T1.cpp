@@ -62,14 +62,14 @@ public:
 
 int main(){
     WordDictionary wd = WordDictionary();
-    wd.addWord("bada");
-    wd.addWord("dada");
+    wd.addWord("bad");
+    wd.addWord("dad");
     wd.addWord("madc");
     wd.addWord("madx");
     wd.addWord("madg");
     wd.search(".a.");
-//    wd.search("bad");
-//    wd.search(".ad");
-//    wd.search("b..");
-//    wd.search("c..");
+    wd.search("bad");
+    wd.search(".ad.");
+    wd.search("b..");
+    wd.search("c..");
 }
