@@ -37,6 +37,6 @@ public class Student implements Runnable{
         }catch (InterruptedException e){
             System.out.println("Thread interrupted");
         }
-        System.out.println("Done sleeping");
+        System.out.println("Done sleeping " + name);
     }
 }
