@@ -91,7 +91,7 @@ from customer join registers on customer.Id = registers.customerId
 join franchise on registers.franchiseId = franchise.Id
 join develops on franchise.Id = develops.franchiseId
 join menu on develops.menuId = menu.Id
-join order on order.menuId = menu.Id
+where develops.cuisineName in customer.preferred_cuisines
 group by customer.name
 having count(distinct franchise.Id) >= 2;
 
