@@ -19,7 +19,7 @@ struct myComp {
 
 int lowest_min_dist;
 
-void BFS(map<int, vector<pair<int, int>>>& adj,priority_queue<pd, vector<pd>, myComp>& pq,
+void BFS(map<int, vector<pair<int, int>>>& adj, priority_queue<pd, vector<pd>, myComp>& pq,
          set<int>& colored, int source, int dist[]){
 
     if(!colored.count(source)){
