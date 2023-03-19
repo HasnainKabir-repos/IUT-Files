@@ -1,0 +1,111 @@
+//2A
+db.user.insertOne({
+    "email": "nibir@iut-dhaka.edu", 
+    "password" : "Nibir1234", 
+    "name": "Nibir"
+});
+
+//2B
+db.user.insertMany([
+    {
+        "email": "tahlil@iut-dhaka.edu",
+        "password" : "tahlil123",
+        "name" : "K M Tahlil Mahfuz Faruk",
+        "phone no" : "012333333",
+        "date of birth" : new ISODate("2002-05-18"),
+        "profile created" : new Date(),
+        "hobbies" : ["being lazy", "being racist"]
+    },
+    {
+        "email": "Mamun@iut-dhaka.edu",
+        "password" : "mamun123",
+        "name" : "Mamunur Rahman",
+        "phone no" : "012333333",
+        "date of birth" : new ISODate("2002-03-21"),
+        "profile created" : new Date(),
+        "hobbies" : ["Reddit", "Contemplating life"]
+    }
+]);
+
+//2C
+db.user.insertOne({
+    "email": "muaz@iut-dhaka.edu", 
+    "password" : "Muaz1234", 
+    "name": "Muazul Islam",
+    "phone no" : "012333333",
+    "date of birth" : new ISODate("2002-02-21"),
+    "working status" : "racism"
+});
+
+//2D
+db.follower.insertMany([
+    {
+        "user email" : "nibir@iut-dhaka.edu",
+        "follower emails" :["tahlil@iut-dhaka.edu", "muaz@iut-dhaka.edu"]
+    },
+    {
+        "user email" : "muaz@iut-dhaka.edu",
+        "follower emails" :["tahlil@iut-dhaka.edu"]
+    }
+]);
+
+//2E
+db.post.insertMany([
+    {
+        "post id" : "1",
+        "title" : "Chilling with da bois",
+        "time" : new ISODate("2023-03-10"),
+        "likes" : ["nibir@iut-dhaka.edu", "tahlil@iut-dhaka.edu"]
+    },
+    {
+        "post id" : "1",
+        "title" : "Chilling alone",
+        "time" :  new ISODate("2023-03-12"),
+        "likes" : ["Mamun@iut-dhaka.edu"]
+    }
+]);
+db.post.insertMany([
+    {
+        "post id" : "2",
+        "title" : "I hate life",
+        "time" :  new ISODate("2023-03-14"),
+        "likes" : ["nibir@iut-dhaka.edu", "tahlil@iut-dhaka.edu"]
+    },
+    {
+        "post id" : "2",
+        "title" : "I hate me",
+        "time" : new ISODate("2023-03-14"),
+        "likes" : ["Mamun@iut-dhaka.edu"]
+    }
+]);
+db.post.insertOne(
+    {
+        "post id" : "3",
+        "title" : "Covfefe",
+        "time" : new ISODate("2022-04-14"),
+        "likes" : ["nibir@iut-dhaka.edu", "tahlil@iut-dhaka.edu"]
+    }
+);
+//2F
+
+db.post.updateMany(
+    {"post id" : "1"},
+    {$set: {"comments" : ["Why was I not invited?","Damn"]} }
+);
+
+db.post.updateMany(
+    {"post id" : "2"},
+    {$set: {"comments" : ["Dont hate","Damn"]} }
+);
+
+db.post.updateMany(
+    {"post id" : "3"},
+    {$set: {"comments" : ["say what?","Damn"]} }
+);
+
+
+//3A
+db.post.find().sort({"time": -1});
+
+//3B
+db.post.find({"time": {$gt : new Date( Date.now() - 24*60*60 * 1000)}});
