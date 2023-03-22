@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "640fe596c7e05a1ec3deabbb"
+  },
+  "user email": "nibir@iut-dhaka.edu",
+  "follower emails": [
+    "tahlil@iut-dhaka.edu",
+    "muaz@iut-dhaka.edu"
+  ]
+},{
+  "_id": {
+    "$oid": "640fe596c7e05a1ec3deabbc"
+  },
+  "user email": "muaz@iut-dhaka.edu",
+  "follower emails": [
+    "tahlil@iut-dhaka.edu"
+  ]
+},{
+  "_id": {
+    "$oid": "640fe71ac7e05a1ec3deabc4"
+  },
+  "user email": "nibir@iut-dhaka.edu",
+  "follower emails": [
+    "tahlil@iut-dhaka.edu",
+    "muaz@iut-dhaka.edu"
+  ]
+},{
+  "_id": {
+    "$oid": "640fe71ac7e05a1ec3deabc5"
+  },
+  "user email": "muaz@iut-dhaka.edu",
+  "follower emails": [
+    "tahlil@iut-dhaka.edu"
+  ]
+}]

@@ -109,3 +109,13 @@ db.post.find().sort({"time": -1});
 
 //3B
 db.post.find({"time": {$gt : new Date( Date.now() - 24*60*60 * 1000)}});
+
+//3C
+db.follower.aggregate([
+    {
+      $match:{
+        "follower emails.1":{$exists : true}
+      }
+    },
+    { $project: { _id: 1, "user email": 1} }
+    ]);

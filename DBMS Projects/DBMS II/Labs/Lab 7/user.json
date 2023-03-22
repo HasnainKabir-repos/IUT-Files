@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "640fe6fdc7e05a1ec3deabc0"
+  },
+  "email": "nibir@iut-dhaka.edu",
+  "password": "Nibir1234",
+  "name": "Nibir"
+},{
+  "_id": {
+    "$oid": "640fe705c7e05a1ec3deabc1"
+  },
+  "email": "tahlil@iut-dhaka.edu",
+  "password": "tahlil123",
+  "name": "K M Tahlil Mahfuz Faruk",
+  "phone no": "012333333",
+  "date of birth": {
+    "$date": {
+      "$numberLong": "1021680000000"
+    }
+  },
+  "profile created": {
+    "$date": {
+      "$numberLong": "1678763781119"
+    }
+  },
+  "hobbies": [
+    "being lazy",
+    "being racist"
+  ]
+},{
+  "_id": {
+    "$oid": "640fe705c7e05a1ec3deabc2"
+  },
+  "email": "Mamun@iut-dhaka.edu",
+  "password": "mamun123",
+  "name": "Mamunur Rahman",
+  "phone no": "012333333",
+  "date of birth": {
+    "$date": {
+      "$numberLong": "1016668800000"
+    }
+  },
+  "profile created": {
+    "$date": {
+      "$numberLong": "1678763781119"
+    }
+  },
+  "hobbies": [
+    "Reddit",
+    "Contemplating life"
+  ]
+},{
+  "_id": {
+    "$oid": "640fe70ac7e05a1ec3deabc3"
+  },
+  "email": "muaz@iut-dhaka.edu",
+  "password": "Muaz1234",
+  "name": "Muazul Islam",
+  "phone no": "012333333",
+  "date of birth": {
+    "$date": {
+      "$numberLong": "1014249600000"
+    }
+  },
+  "working status": "racism"
+}]
