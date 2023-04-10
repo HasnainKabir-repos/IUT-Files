@@ -1,0 +1,34 @@
+MATCH (N) DELETE N
+
+// CUSTOMER 
+CREATE (:CUSTOMER {customer_id: 1, name: 'Nibir', phone_no: '01747116015', age: 22, gender: 'Male', country: 'Bangladesh'});
+CREATE (:CUSTOMER {customer_id: 2, name: 'Mamun', phone_no: '14619', age: 25, gender: 'Male', country: 'Bangladesh'});
+
+// GENRE 
+CREATE (:GENRE {genre_id: 1, name: 'Comedy'})
+CREATE (:GENRE {genre_id: 2, name: 'Drama'})
+CREATE (:GENRE {genre_id: 3, name: 'Action'})
+
+// AUTHOR
+CREATE(:AUTHOR {NAME: 'John Brown', COUNTRY:'USA',DATE_OF_BIRTH:date('1996-09-06')})
+CREATE(:AUTHOR {NAME: 'Martin Scott', COUNTRY:'UK',DATE_OF_BIRTH:date('1976-01-04')})
+CREATE(:AUTHOR {NAME: 'Walter White', COUNTRY:'USA',DATE_OF_BIRTH:date('1982-06-06')})
+
+// BOOK
+CREATE(:BOOK{TITLE:'The night sleeps',PUBLISH_YEAR:2001,LANGUAGE:'English',PAGE_COUNT:550,PRICE:120});
+CREATE(:BOOK{TITLE:'The night stands',PUBLISH_YEAR:2006,LANGUAGE:'Turkish',PAGE_COUNT:200,PRICE:280});
+CREATE(:BOOK{TITLE:'The night lies',PUBLISH_YEAR:2002,LANGUAGE:'English',PAGE_COUNT:500,PRICE:130});
+
+// CUSTOMER AND BOOKS 
+MATCH (c:CUSTOMER {customer_id: 1}), (b:BOOK {title: 'The night sleeps'})
+CREATE (c)-[:PURCHASED {purchased_date: date('2023-04-04'), amount: 100}]->(b)
+
+//BOOK AND GENRE
+
+MATCH (c:BOOK {TITLE:'The night sleeps'}), (g:GENRE {name: 'Drama'})
+CREATE (c)-[:ISOF]->(g)
+
+//RATE AUTHOR
+
+MATCH (c:CUSTOMER {customer_id: 1}), (b:AUTHOR {NAME:'John Brown'})
+CREATE (c)-[RATES]->(b)
