@@ -1,55 +1,88 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-const int N = 10005;
-int dist[N], parent[N];
+#define ll long long
 
-void BFS(vector<pair<int, int>>& adj, int s, int t){
-    priority_queue<pair<int, int>> pq;
-    memset(dist, -1, sizeof(dist));
-    memset(parent, -1, sizeof(parent));
+const int MAX = 205;
 
-    pq.push({dist[s], s});
-    while (!pq.empty()) {
-        int u = pq.top().second;
-        pq.pop();
+const int maxnodes = 100;
+int n,p[110],cap[110][110];
 
-        for (auto v : adj[u]) {
-            if (dist[v.first] < min(dist[u], v.second)) {
-                dist[v.first] = min(dist[u], v.second);
-                parent[v.first] = u;
-                pq.push({dist[v.first], v.first});
-            }
+
+int bfs(int src,int des)
+{
+    int vis[110]= {0};
+    vis[src]=1;
+    p[src]=-1;
+    queue<int>Q;
+    Q.push(src);
+
+    while(!Q.empty())
+    {
+        int u=Q.front();
+        Q.pop();
+        for(int i=1; i<=n; i++)
+        {
+            if(vis[i] or cap[u][i]<=0) continue;
+            Q.push(i);
+            vis[i]=1;
+            p[i]=u;
+
         }
     }
+
+    return vis[des];
+}
+int maxFlow(int src,int des)
+{
+    int f=0;
+    while(bfs(src,des))
+    {
+
+        int path=1e9;
+        for(int i=des; i!=src; i=p[i]) path=min(path,cap[p[i]][i]);
+
+        for(int i=des; i!=src; i=p[i])
+        {
+
+            int u=p[i];
+            int v=i;
+
+            cap[u][v]-=path;
+            //cap[v][u]+=path;
+
+        }
+
+        f+=path;
+
+    }
+    return f;
 }
 
-int main(){
-    int T;
-    cin>>T;
 
-    while(T--){
-        int n;
-        cin>>n;
 
-        int s, t, c;
-        cin>>s>>t>>c;
+int main()
+{
+    int test,cs=0;
+    cin>>test;
+    while(test--)
+    {
+        memset(cap,0,sizeof(cap));
 
-        vector<pair<int, int>> adj;
 
-        while(c--){
-            int i, j, k;
-            cin>>i>>j>>k;
+        int m,s,t;
+        cin>>n>>s>>t>>m;
 
-            pair<int, int> p1(j, k);
-            adj[i].push_back(p1);
-
-            pair<int, int> p1(i, k);
-            adj[j].push_back(p2);
+        for(int i=0;i<m;i++)
+        {
+            int a,b,c;
+            cin >> a >> b >> c;
+            cap[a][b]+=c;
+            cap[b][a]+=c;
         }
+        cout <<"Case "<<++cs<<": "<< maxFlow(s,t) << "\n";
 
-        BFS(adj, s, t);
-
-        cout<<dist[t]<<endl;
     }
+
+
 }
