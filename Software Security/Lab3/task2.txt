@@ -1,0 +1,35 @@
+task 2
+
+regex: ^[a-zA-Z0-9]{6,12}$
+9z8yMc9T
+31337aq
+39C3qxP
+R6fUTY2nC8
+9Qe5f4
+User35
+u3Y73h3
+5Xze553j
+
+User35
+
+
+Regex: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$
+br33zy@gmail.com
+lewisham44@amg.com
+johnny.the.sinner@yahoo.com
+badyeti@gmail.com
+maxximax@fedfull.com
+jklabada@tryhackme.com
+johnny.the.sinner@yahoo.com
+hunter4k@canary.com
+hussain.volt@hotmail.com
+marckymarc@tryhackme.com
+batteryvoltas@alfa.com
+
+8
+
+amg.com
+
+fedfull.com
+
+hussain.volt
