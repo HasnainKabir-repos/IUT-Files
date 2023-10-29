@@ -6,8 +6,11 @@ import java.util.List;
 public class Village{
     List<CompundGraphic> components;
 
-    public void add(CompundGraphic compundGraphic){
+    public Village(){
         components = new ArrayList<>();
+    }
+
+    public void add(CompundGraphic compundGraphic){
         components.add(compundGraphic);
     }
 

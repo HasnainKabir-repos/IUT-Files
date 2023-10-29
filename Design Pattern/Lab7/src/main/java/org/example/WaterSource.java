@@ -6,12 +6,12 @@ public class WaterSource extends CompundGraphic {
     public WaterSource(){
         group = new CompundGraphic();
         group.add(new Rectangle());
-
+        this.draw();
     }
 
     @Override
     public void draw() {
-        super.draw();
+
         System.out.println("WaterSource drawn");
     }
 }

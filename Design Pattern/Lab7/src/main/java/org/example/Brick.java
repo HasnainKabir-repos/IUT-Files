@@ -6,11 +6,11 @@ public class Brick extends CompundGraphic{
     public Brick(){
         group = new CompundGraphic();
         group.add(new Square());
+        this.draw();
     }
 
     @Override
     public void draw() {
-        super.draw();
         System.out.println("Brick Drawn");
     }
 }

@@ -1,6 +1,10 @@
 task 2
+Try Hack Me
 
-regex: ^[a-zA-Z0-9]{6,12}$
+
+Regex: ^[a-zA-Z0-9]{6,12}$
+
+Output:
 9z8yMc9T
 31337aq
 39C3qxP
@@ -10,10 +14,15 @@ User35
 u3Y73h3
 5Xze553j
 
-User35
+Ans: 8 
+
+Regex: ^[a-zA-Z]+[0-9]+$
+Ans: User35
 
 
 Regex: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$
+
+Output:
 br33zy@gmail.com
 lewisham44@amg.com
 johnny.the.sinner@yahoo.com
@@ -26,10 +35,23 @@ hussain.volt@hotmail.com
 marckymarc@tryhackme.com
 batteryvoltas@alfa.com
 
-8
+Regex: ^.+@.+\.com$
+Ans: 11
 
-amg.com
+Regex: ^.+@.+\.com$
+Ans: 8
 
-fedfull.com
+Regex: ^lewisham44+@.+\.com$
+Ans: amg.com
 
-hussain.volt
+Regex: ^maxximax+@.+\.com$
+Ans: fedfull.com
+
+Regex: ^.+@hotmail.com$
+Ans: hussain.volt
+
+Regex: ^https?://(www\.)?.+\..+$
+Ans: 16
+
+Regex: ^https://(www\.)?.+\..+$
+Ans: 7

@@ -7,12 +7,13 @@ public class Banana extends CompundGraphic{
         group = new CompundGraphic();
         group.add(new Cylinder());
         group.add(new Triangle());
+        this.draw();
 
     }
 
     @Override
     public void draw() {
-        super.draw();
+
         System.out.println("Banana drawn");
     }
 }

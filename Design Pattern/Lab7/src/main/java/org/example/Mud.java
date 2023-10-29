@@ -7,11 +7,11 @@ public class Mud extends CompundGraphic{
     public Mud(){
         group = new CompundGraphic();
         group.add(new Rectangle());
+        this.draw();
     }
 
     @Override
     public void draw() {
-        super.draw();
         System.out.println("Mud drawn");
     }
 }

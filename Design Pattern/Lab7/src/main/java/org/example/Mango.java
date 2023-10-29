@@ -6,12 +6,12 @@ public class Mango extends CompundGraphic{
     public Mango(){
         group = new CompundGraphic();
         group.add(new Circle());
-
+        this.draw();
     }
 
     @Override
     public void draw() {
-        super.draw();
+
         System.out.println("Mango drawn");
     }
 }
