@@ -1,0 +1,9 @@
+Name: A Z Hasnain Kabir
+ID: 200042102
+
+Design pattern: Facade Pattern
+
+Scenario:
+
+Brewing coffee is an easy process. However, it contains a series of steps. Some of these steps can be common to making some kind of coffee while some other processes can be specific to one type of coffee. For instance, every coffee needs boiling water but all coffee making process does not involve Milk Frothing. I have designed a Facade pattern which takes care of these complexities through a Facade class.
+I have made two kinds of coffee namely, Cappucino and Black coffee. Cappucino making process involves Milk Frothing whereas Black coffee brewing process does not.

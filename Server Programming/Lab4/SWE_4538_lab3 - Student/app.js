@@ -47,8 +47,7 @@ app.get("/welcome", ensureAuthenticated, (req, res) => {
 });
 
 
-const taskRoutes = require('./routes/task.routes');
-app.use(taskRoutes);
+
 
 
 //Connect to DB

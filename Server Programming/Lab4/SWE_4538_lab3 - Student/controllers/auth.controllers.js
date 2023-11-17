@@ -19,7 +19,7 @@ const getLogin = async (req, res) => {
 
 const postLogin = (req, res, next) => {
   passport.authenticate("local", {
-    successRedirect: "/welcome",
+    successRedirect: "/media-pages",
     failureRedirect: "/login",
     failureFlash: true,
   })(req, res, next);
