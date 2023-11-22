@@ -1,6 +1,6 @@
 package com.HasnainKabir.Car;
 
-abstract class Car {
+public abstract class Car {
     EngineBehavior engineBehavior;
     TurbochargerBehavior turbochargerBehavior;
 

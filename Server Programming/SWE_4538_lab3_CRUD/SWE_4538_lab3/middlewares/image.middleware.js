@@ -30,7 +30,7 @@ const audioStorage = multer.diskStorage({
 });
 
 const uploadAudioFile = multer({
-  preservePath: true,
+  preservePath: true, //Keep the full path of files instead of just the base name
   storage: audioStorage,
 });
 module.exports = { uploadProfileImage, uploadAudioFile };

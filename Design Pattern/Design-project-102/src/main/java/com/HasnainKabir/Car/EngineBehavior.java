@@ -1,6 +1,6 @@
 package com.HasnainKabir.Car;
 
-interface EngineBehavior {
+public interface EngineBehavior {
     void start();
 
     void stop();

@@ -1,5 +1,5 @@
 package com.HasnainKabir.Car;
 
-interface TurbochargerBehavior {
+public interface TurbochargerBehavior {
     void applyTurbocharger();
 }

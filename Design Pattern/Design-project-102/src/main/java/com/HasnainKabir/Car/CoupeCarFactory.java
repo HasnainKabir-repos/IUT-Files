@@ -7,7 +7,6 @@ public class CoupeCarFactory implements CarFactory {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose Coupe Car: 1 - Toyota GR86, 2 - Subaru BRZ");
         int choice = scanner.nextInt();
-        scanner.close();
 
         switch (choice) {
             case 1:

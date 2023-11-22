@@ -8,7 +8,7 @@ public class Player {
 
     }
 
-    public Player getInstance(){
+    public static Player getInstance(){
         if(instance == null){
             instance =  new Player();
         }

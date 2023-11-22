@@ -7,7 +7,6 @@ public class RoadsterCarFactory implements CarFactory{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose Roadster Car: 1 - Porsche Boxster, 2 - Ferrari 812");
         int choice = scanner.nextInt();
-        scanner.close();
 
         switch (choice) {
             case 1:

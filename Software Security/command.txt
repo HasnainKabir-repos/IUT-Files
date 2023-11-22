@@ -1,0 +1,3 @@
+sudo docker run --name webgoat -p 8080:8080 -p 9090:9090 -p 80:8888 webgoat/goatandwolf:latest
+
+JSESSIONID=x5q3YgD8PdC4XFKtkFbDMEYZJ_2osLi28cErUGUF
