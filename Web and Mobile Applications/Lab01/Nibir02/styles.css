@@ -1,0 +1,68 @@
+.row{
+    display: flex;
+}
+.main{
+    width: 100%;
+
+}
+.header{
+    padding-left: 30px;
+}
+.main-text{
+    text-align: center;
+}
+.footer{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+menu{
+    width: 15%;
+    margin-top: 0px;
+    padding-left: 30px;
+}
+
+.main-table{
+    width: 100%;
+}
+table{
+    width: 80%;
+    margin: auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px 35px;
+  }
+.con{
+    padding: 15px 30px;
+}
+label{
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+input{
+    margin-top: 10px;
+}
+
+select{
+    width: 12.5%;
+    margin-top: 10px;
+}
+
+textarea{
+    margin-top: 10px;
+}
+
+button{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.footer{
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+    text-align: center;
+}

