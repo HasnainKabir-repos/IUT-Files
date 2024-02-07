@@ -1,0 +1,17 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+
+  td{
+    cursor: pointer;
+  }
+
+  .left_angular{
+    cursor: pointer;
+  }
+
+  .right_angular{
+    cursor: pointer;
+  }
