@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "67aba61e-fbcb-4e22-ac61-f775f3cea8d9",
+		"name": "Testing Lab 5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26299973"
+	},
+	"item": [
+		{
+			"name": "task 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response body contains status OK\", function () {\r",
+							"    var responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody.status).to.equal(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/status",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientName\":\"Nibir\",\r\n    \"clientEmail\":\"hasnainkabir120@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/api-clients",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"api-clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an array of books\", function () {\r",
+							"    pm.expect(pm.response.json()).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Each book has an id, name, type, and availability\", function () {\r",
+							"    var books = pm.response.json();\r",
+							"    books.forEach(function(book) {\r",
+							"        pm.expect(book).to.have.property('id');\r",
+							"        pm.expect(book).to.have.property('name');\r",
+							"        pm.expect(book).to.have.property('type');\r",
+							"        pm.expect(book).to.have.property('available');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Return all books with type 'fiction'\", function () {\r",
+							"    var fictionBooks = pm.response.json().filter(book => book.type === 'fiction');\r",
+							"    pm.expect(fictionBooks.length).to.be.greaterThan(0);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTM2YWM4OTI3NmZmZTkzODYwYmQ2NzQiLCJpYXQiOjE2OTgxODMzODcsImV4cCI6MTY5ODc4ODE4N30.aEfAPofbWK1dX_Q9Mt3T93bxbhQMKWM63qzUJ_7FIE4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/books",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var books = pm.response.json();\r",
+							"\r",
+							"var availableBook = books.find(book => book.available);\r",
+							"\r",
+							"pm.globals.set(\"AvailableBookId\", availableBook.id);\r",
+							"pm.test(\"AvailableBookId global variable is not null\", function () {\r",
+							"    pm.expect(pm.globals.get(\"AvailableBookId\")).to.not.be.null;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/books",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check book name and type\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.include(\"Russian\");\r",
+							"    pm.expect(jsonData.type).to.include(\"fiction\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/books/{{AvailableBookId}}",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"books",
+						"{{AvailableBookId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();\r",
+							"\r",
+							"pm.globals.set(\"orderId\",response.orderId);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e10391cde7011033c489a57378837c48f1e4e9e6f5e6d2a14aeae71136eea3b3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\":{{AvailableBookId}},\r\n    \"customername\":\"Nibir\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/orders",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
