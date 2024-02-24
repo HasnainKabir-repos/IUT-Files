@@ -1,0 +1,145 @@
+<mxfile host="app.diagrams.net" modified="2023-11-23T20:49:15.734Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="KT4qeT3Ri8SLMnv0FShz" version="22.1.3" type="device">
+  <diagram id="cYnnyppxZ_3jE1LkvJnh" name="Page-1">
+    <mxGraphModel dx="1050" dy="134" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node9" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;i style=&quot;font-size: 16px;&quot;&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;AbstractDuckFactory&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ createRedheadDuck(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createDuckCall(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createRubberDuck(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createMallardDuck(): Quackable&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="220" y="590" width="251" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="node8" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;CountingDuckFactory&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ createMallardDuck(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createRedheadDuck(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createDuckCall(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createRubberDuck(): Quackable&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="367" y="817" width="251" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;DuckCall&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ toString(): String&lt;br style=&quot;font-size: 16px;&quot;&gt;+ quack(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1275" y="889" width="250" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node15" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;DuckFactory&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ createDuckCall(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createRedheadDuck(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createMallardDuck(): Quackable&lt;br style=&quot;font-size: 16px;&quot;&gt;+ createRubberDuck(): Quackable&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="96" y="817" width="251" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node7" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;DuckSimulator&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ main(String[]): void&lt;br style=&quot;font-size: 16px;&quot;&gt;~ simulate(AbstractDuckFactory): void&lt;br style=&quot;font-size: 16px;&quot;&gt;~ simulate(Quackable): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="670" y="768" width="273" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="node13" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Flock&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ add(Quackable): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ toString(): String&lt;br style=&quot;font-size: 16px;&quot;&gt;+ quack(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="659" y="940" width="250" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="node12" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Goose&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ honk(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="995" y="768" width="122" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="node11" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;GooseAdapter&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ quack(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ toString(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="1199" width="250" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node4" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;MallardDuck&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ toString(): String&lt;br style=&quot;font-size: 16px;&quot;&gt;+ quack(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="870" y="1199" width="250" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Observable&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1082" y="1050" width="250" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="node6" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;i style=&quot;font-size: 16px;&quot;&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Observer&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ update(QuackObservable): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1440" y="1110" width="241" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;QuackCounter&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ getQuacks(): int&lt;br style=&quot;font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ quack(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="330" y="1199" width="250" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;i style=&quot;font-size: 16px;&quot;&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;QuackObservable&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="980" y="880" width="250" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="node10" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;i style=&quot;font-size: 16px;&quot;&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Quackable&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ quack(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="929" y="1050" width="133" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="node16" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Quackologist&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ update(QuackObservable): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1440" y="1235" width="241" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;RedheadDuck&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ quack(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ toString(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="600" y="1199" width="250" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node14" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;RubberDuck&lt;/b&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; line-height: 1.6; font-size: 16px;&quot;&gt;+ toString(): String&lt;br style=&quot;font-size: 16px;&quot;&gt;+ quack(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ notifyObservers(): void&lt;br style=&quot;font-size: 16px;&quot;&gt;+ registerObserver(Observer): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=16;fontFamily=Helvetica;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=4;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="356" y="991" width="250" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node8" target="node9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="492" y="792" />
+              <mxPoint x="357" y="792" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node5" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="1179" />
+              <mxPoint x="995" y="1179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node15" target="node9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="221" y="792" />
+              <mxPoint x="357" y="792" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge0" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node13" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="784" y="1170" />
+              <mxPoint x="996" y="1170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node11" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1265" y="1179" />
+              <mxPoint x="995" y="1179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node4" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.077;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node0" target="node3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge9" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node2" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="455" y="1179" />
+              <mxPoint x="995" y="1179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge11" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.077;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node10" target="node3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge10" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node16" target="node6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge7" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node1" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="1179" />
+              <mxPoint x="995" y="1179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge8" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#6D1F00;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;fillColor=#a0522d;strokeWidth=4;fontSize=16;labelBorderColor=none;" parent="1" source="node14" target="node10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="481" y="1179" />
+              <mxPoint x="995" y="1179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
