@@ -5,12 +5,12 @@ public class Vehicle {
     protected int Year;
     protected String Make;
     protected String Model;
-    protected int vehicleStatus;
+    public int vehicleStatus;
     protected VehicleType vehicleType;
     protected RentalRecord records[]= new RentalRecord[10];
 
     // Constructor to accept the details of a vehicle
-    Vehicle(String VehicleId,int Year,String Make,String Model,int status,VehicleType vehicleType){
+    public Vehicle(String VehicleId,int Year,String Make,String Model,int status,VehicleType vehicleType){
         this.Vehicle_id=VehicleId;
         this.Year=Year;
         this.Make=Make;

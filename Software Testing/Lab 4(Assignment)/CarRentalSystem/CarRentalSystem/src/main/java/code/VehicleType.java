@@ -1,6 +1,6 @@
 package code;
 
-class VehicleType {
+public class VehicleType {
 
     private int carSeats;
     private int vanSeats=15;
@@ -8,12 +8,12 @@ class VehicleType {
     private String[] days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 
     //Constructor of Car type
-    VehicleType(int seats)
+    public VehicleType(int seats)
     {
         this.carSeats=seats;
     }
     //Constructor for Van type
-    VehicleType(int seats,DateTime LastMaintenance){
+    public VehicleType(int seats,DateTime LastMaintenance){
         this.vanSeats=seats;
         this.LastMaintenance=LastMaintenance;
     }

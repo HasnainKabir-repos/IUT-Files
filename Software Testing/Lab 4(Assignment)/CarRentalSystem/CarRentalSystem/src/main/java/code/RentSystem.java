@@ -7,8 +7,8 @@ import java.util.*;
 
 public class RentSystem {
 
-	private Car cars[] = new Car[50];
-    private Van vans[] = new Van[50];
+	public Car cars[] = new Car[50];
+	public Van vans[] = new Van[50];
 
 	public static DateFormat format = new SimpleDateFormat("dd/MM/yyyy"); //Basic format expected from the User
 
@@ -65,7 +65,7 @@ public class RentSystem {
 	 * @param //Scanner variable
 	 * @return adds either car or van if the details are correct
 	 */
-    private void add(Scanner scan)
+    public void add(Scanner scan)
     {
 		int i=0;
 		String vehicleID="";
@@ -160,7 +160,7 @@ public class RentSystem {
 	 * @param //Scanner variable
 	 * @return Rents a car or van if the details are correct
 	 */
-	private void rent(Scanner sc)
+	public void rent(Scanner sc)
 	{
 		System.out.print("Vehicle id: ");
 		String id = sc.nextLine();
@@ -278,7 +278,7 @@ public class RentSystem {
 	 * @param //Scanner variable
 	 * @return prints the details of the car along with rental fee and charges if it is returned late
 	 */
-	private void returnCar(Scanner sc)
+	public void returnCar(Scanner sc)
 	{
 		System.out.print("VehicleId: ");
 		String id = sc.next();
@@ -357,8 +357,8 @@ public class RentSystem {
 	 * @param //Scanner variable
 	 * @return prints appropriate message if sent for maintenance
 	 */
-	
-	private void vehicleMaintenance(Scanner sc){
+
+	public void vehicleMaintenance(Scanner sc){
 		System.out.print("Vehicle id: ");
 		String id = sc.next();
 		if(this.cars[0]==null )
@@ -423,7 +423,7 @@ public class RentSystem {
 	 * @param //Scanner variable
 	 * @return prints appropriate message after completing maintenance
 	 */
-	private void completeMaintenance(Scanner sc)
+	public void completeMaintenance(Scanner sc)
 	{
 		System.out.print("Enter vehicle ID: ");
 		String id = sc.next();
@@ -491,8 +491,8 @@ public class RentSystem {
 	/**
 	 * Method used to get details of car or van with their rental history
 	 */
-	
-	private void getDetails()
+
+	public void getDetails()
 	{
 		if(cars[0]!=null && vans[0]!=null)
 		{

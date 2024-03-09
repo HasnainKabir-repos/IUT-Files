@@ -1,11 +1,11 @@
 package code;
-class Van extends Vehicle{
+public class Van extends Vehicle{
 
     private double rate=235;
     private double lateFee=299;
 
     //Constructor to accept van details
-    Van(String vehicleId,int year,String make,String model,int status,VehicleType vehicleType)
+    public Van(String vehicleId,int year,String make,String model,int status,VehicleType vehicleType)
     {
         super(vehicleId,year,make,model,status,vehicleType);
 //        this.rate=rate;
@@ -28,7 +28,7 @@ class Van extends Vehicle{
      * @param returnDate accepts the date when it has to be returned
      * @return Returns true if returned else false with appropriate messages
      */
-    public  boolean returnVehicle(DateTime returnDate)
+    public boolean returnVehicle(DateTime returnDate)
     {
         String vehicleType;
         if(this.Vehicle_id.contains("C_"))
