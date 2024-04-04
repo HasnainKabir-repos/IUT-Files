@@ -1,4 +1,4 @@
-package com.example.product_service.entity;
+package com.example.order_service.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,17 +7,22 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "products")
+import java.time.LocalDateTime;
+
+@Document(collection = "orders")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class Order {
+
     @Id
     private String id;
     @Field
-    private String name;
+    private LocalDateTime date= LocalDateTime.now();
     @Field
-    private String description;
+    private String customerId;
     @Field
-    private int price;
+    private String productId;
+    @Field
+    private String employeeId;
 }

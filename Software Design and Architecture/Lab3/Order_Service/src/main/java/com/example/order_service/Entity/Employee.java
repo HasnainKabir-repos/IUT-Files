@@ -1,4 +1,4 @@
-package com.example.product_service.entity;
+package com.example.order_service.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,17 +7,17 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "products")
+@Document(collection = "employees")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class Employee {
     @Id
     private String id;
     @Field
     private String name;
     @Field
-    private String description;
+    private String designation;
     @Field
-    private int price;
+    private double salary;
 }
