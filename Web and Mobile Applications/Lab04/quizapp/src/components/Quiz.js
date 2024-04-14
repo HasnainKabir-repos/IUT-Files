@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Progress from './Progress';
 
 const Quiz = ({ quiz }) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -7,6 +8,16 @@ const Quiz = ({ quiz }) => {
     const [timer, setTimer] = useState(10);
     const [correctSet, SetCorrectSet] = useState(false);
     const [correct, setCorrect] = useState(false);
+    const [localScore, setLocalScore] = useState(0);
+
+    useEffect(() => {
+        const localScore = localStorage.getItem('score') || 0;
+        setLocalScore(localScore);
+    }, []);
+
+    useEffect(()    => {
+        console.log(localScore);
+    }, [localScore]);
 
     useEffect(() => {
         // Start the timer for the current question
@@ -33,6 +44,7 @@ const Quiz = ({ quiz }) => {
     const handleAnswer = (answer) => {
         if (answer === quiz.questions[currentQuestion].correctAnswer) {
             setScore((prevScore) => prevScore + 1);
+            
             setCorrect(true);
             SetCorrectSet(true);
         } else {
@@ -46,8 +58,12 @@ const Quiz = ({ quiz }) => {
             setCurrentQuestion((prevQuestion) => prevQuestion + 1);
             setTimer(10);
         }
+        
     };
 
+    useEffect(()=>{
+        localStorage.setItem('score', localScore+score);
+    }, [score]);
 
     return (
         <div className="mx-auto max-w-lg p-4 border border-gray-300 rounded-lg shadow-md">
@@ -62,11 +78,14 @@ const Quiz = ({ quiz }) => {
             <p className="text-sm">Time remaining: {timer} seconds</p>
             <p className="text-sm">Score: {score}</p>
             <br />
+            <div><Progress current={currentQuestion+1} total={quiz.questions.length}/></div>
             {currentQuestion === quiz.questions.length - 1 && (
                 <Link href="/">
-                    <a className="text-blue-500 hover:underline">Home</a>
+                    <div className="text-blue-500 hover:underline">Home</div>
                 </Link>
+                
             )}
+            
         </div>
     );
 };

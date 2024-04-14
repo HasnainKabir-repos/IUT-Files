@@ -5,13 +5,16 @@ const CreateQuiz = () => {
     const [question, setQuestion] = useState('');
     const [choices, setChoices] = useState([]);
     const [correctAnswer, setCorrectAnswer] = useState('');
-
+    const [questions, setQuestions] = useState([]);
     const handleQuestionChange = (e) => {
         setQuestion(e.target.value);
     };
 
     const handleSubmit = (quiz) => {
-        console.log(quiz)
+        const quizzes = JSON.parse(localStorage.getItem('quizzes')) || [];
+        quizzes.push(quiz);
+        localStorage.setItem('quizzes', JSON.stringify(quizzes));
+        console.log(quiz);
     }
 
     const handleChoiceChange = (e, index) => {
@@ -34,23 +37,42 @@ const CreateQuiz = () => {
         setChoices(updatedChoices);
     };
 
-    const handleSubmitQuiz = () => {
-        // Validate inputs and call the handleSubmit prop
+    const handleAddQuestion = () => {
+        // Validate inputs and add question to questions state
         if (question.trim() === '' || choices.length < 2 || correctAnswer.trim() === '') {
             // Handle validation error
             return;
         }
 
-        handleSubmit({
+        setQuestions([...questions, {
             question,
             choices,
             correctAnswer
-        });
+        }]);
 
-        // Reset form
         setQuestion('');
         setChoices([]);
         setCorrectAnswer('');
+    }
+
+    const handleSubmitQuiz = () => {
+        // Validate inputs and submit quiz
+        if (question.trim() === '' || choices.length < 2 || correctAnswer.trim() === '') {
+            // Handle validation error
+            return;
+        }
+
+        const quiz = {
+            questions: [...questions, {
+                question,
+                choices,
+                correctAnswer
+            }]
+        };
+        setQuestion('');
+        setChoices([]);
+        setCorrectAnswer('');
+        handleSubmit(quiz);
     };
 
     return (
@@ -59,13 +81,13 @@ const CreateQuiz = () => {
             <form>
                 <div className="mb-4">
                     <label className="block mb-2">Question:</label>
-                    <input type="text" value={question} onChange={handleQuestionChange} className="border border-gray-300 rounded-md py-2 px-3" />
+                    <input type="text" value={question} onChange={handleQuestionChange} className="border border-gray-300 rounded-md py-2 px-3 text-black" />
                 </div>
                 <div className="mb-4">
                     <label className="block mb-2">Choices:</label>
                     {choices.map((choice, index) => (
                         <div key={index} className="mb-2 flex items-center">
-                            <input type="text" value={choice} onChange={(e) => handleChoiceChange(e, index)} className="border border-gray-300 rounded-md py-2 px-3 mr-2" />
+                            <input type="text" value={choice} onChange={(e) => handleChoiceChange(e, index)} className="border border-gray-300 rounded-md py-2 px-3 mr-2 text-black" />
                             <button type="button" onClick={() => handleRemoveChoice(index)} className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md">Remove</button>
                         </div>
                     ))}
@@ -73,8 +95,9 @@ const CreateQuiz = () => {
                 </div>
                 <div className="mb-4">
                     <label className="block mb-2">Correct Answer:</label>
-                    <input type="text" value={correctAnswer} onChange={handleCorrectAnswerChange} className="border border-gray-300 rounded-md py-2 px-3" />
+                    <input type="text" value={correctAnswer} onChange={handleCorrectAnswerChange} className="border border-gray-300 rounded-md py-2 px-3 text-black" />
                 </div>
+                <button type="button" onClick={handleAddQuestion} className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md mb-2">Add Question</button> <br/>
                 <button type="button" onClick={handleSubmitQuiz} className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md">Submit</button>
             </form>
         </div>

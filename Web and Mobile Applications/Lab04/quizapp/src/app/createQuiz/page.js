@@ -1,3 +1,4 @@
+"use client"
 import CreateQuiz from "../../components/CreateQuiz";
 
 const Create = () =>{
