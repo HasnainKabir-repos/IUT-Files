@@ -54,28 +54,28 @@ const CreateQuiz = () => {
     };
 
     return (
-        <div>
-            <h2>Create Quiz</h2>
+        <div className="mx-auto max-w-lg p-4">
+            <h2 className="text-3xl font-bold mb-4">Create Quiz</h2>
             <form>
-                <div>
-                    <label>Question:</label>
-                    <input type="text" value={question} onChange={handleQuestionChange} style={{ color: 'black' }} />
+                <div className="mb-4">
+                    <label className="block mb-2">Question:</label>
+                    <input type="text" value={question} onChange={handleQuestionChange} className="border border-gray-300 rounded-md py-2 px-3" />
                 </div>
-                <div>
-                    <label>Choices:</label>
+                <div className="mb-4">
+                    <label className="block mb-2">Choices:</label>
                     {choices.map((choice, index) => (
-                        <div key={index}>
-                            <input type="text" value={choice} onChange={(e) => handleChoiceChange(e, index)} style={{ color: 'black' }} />
-                            <button type="button" onClick={() => handleRemoveChoice(index)}>Remove</button>
+                        <div key={index} className="mb-2 flex items-center">
+                            <input type="text" value={choice} onChange={(e) => handleChoiceChange(e, index)} className="border border-gray-300 rounded-md py-2 px-3 mr-2" />
+                            <button type="button" onClick={() => handleRemoveChoice(index)} className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md">Remove</button>
                         </div>
                     ))}
-                    <button type="button" onClick={handleAddChoice}>Add Choice</button>
+                    <button type="button" onClick={handleAddChoice} className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Add Choice</button>
                 </div>
-                <div>
-                    <label>Correct Answer:</label>
-                    <input type="text" value={correctAnswer} onChange={handleCorrectAnswerChange} style={{ color: 'black' }} />
+                <div className="mb-4">
+                    <label className="block mb-2">Correct Answer:</label>
+                    <input type="text" value={correctAnswer} onChange={handleCorrectAnswerChange} className="border border-gray-300 rounded-md py-2 px-3" />
                 </div>
-                <button type="button" onClick={handleSubmitQuiz}>Submit</button>
+                <button type="button" onClick={handleSubmitQuiz} className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md">Submit</button>
             </form>
         </div>
     );

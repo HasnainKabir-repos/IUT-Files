@@ -50,18 +50,22 @@ const Quiz = ({ quiz }) => {
 
 
     return (
-        <div>
-            <h2>{quiz.questions[currentQuestion].question}</h2>
+        <div className="mx-auto max-w-lg p-4 border border-gray-300 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4">{quiz.questions[currentQuestion].question}</h2>
             {quiz.questions[currentQuestion].choices.map((choice, index) => (
-                <div key={index}>
-                    <button onClick={() => handleAnswer(choice)}>{choice}</button>
+                <div key={index} className="mb-2">
+                    <button onClick={() => handleAnswer(choice)} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md focus:outline-none">
+                        {choice}
+                    </button>
                 </div>
             ))}
-            <p>Time remaining: {timer} seconds</p>
-            <p>Score: {score}</p>
-            <br></br>
+            <p className="text-sm">Time remaining: {timer} seconds</p>
+            <p className="text-sm">Score: {score}</p>
+            <br />
             {currentQuestion === quiz.questions.length - 1 && (
-                <Link href="/">Home</Link>
+                <Link href="/">
+                    <a className="text-blue-500 hover:underline">Home</a>
+                </Link>
             )}
         </div>
     );
