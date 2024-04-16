@@ -15,7 +15,7 @@
 from util import manhattanDistance
 from game import Directions
 import random, util
-
+import math
 from game import Agent
 
 class ReflexAgent(Agent):
@@ -74,7 +74,19 @@ class ReflexAgent(Agent):
         newScaredTimes = [ghostState.scaredTimer for ghostState in newGhostStates]
 
         "*** YOUR CODE HERE ***"
-        return successorGameState.getScore()
+        score = successorGameState.getScore()
+        minGhostDistance = math.inf
+        for ghost in newGhostStates:
+            minGhostDistance = min(minGhostDistance, manhattanDistance(newPos, ghost.getPosition()))
+
+        minFoodDistance = math.inf
+        for food in newFood.asList():
+            minFoodDistance = min(minFoodDistance, manhattanDistance(newPos, food))
+
+        if minGhostDistance < 2:
+            return -math.inf
+        
+        return score + 1/minFoodDistance - 1/minGhostDistance
 
 def scoreEvaluationFunction(currentGameState):
     """
@@ -281,7 +293,61 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
         legal moves.
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        _, action = self.value(gameState, 0, self.depth)
+        return action
+    
+    def value(self, gameState, agentIndex, depth):
+        if gameState.isWin() or gameState.isLose() or depth == 0:
+            return self.evaluationFunction(gameState), Directions.STOP
+        elif agentIndex == 0:
+            return self.maxValue(gameState, agentIndex, depth)
+        elif agentIndex > 0:
+            return self.expValue(gameState, agentIndex, depth)
+        
+    def maxValue(self, gameState, agentIndex, depth):
+        currValue, currAction = -1e9, None
+
+        nextAgent = (agentIndex + 1) % gameState.getNumAgents()
+        if nextAgent == 0:
+            nextDepth = depth - 1
+        else:
+            nextDepth = depth
+
+        legalActions = gameState.getLegalActions(agentIndex)
+
+        for action in legalActions:
+            successorGameState = gameState.generateSuccessor(agentIndex, action)
+
+            successorScore, _ = self.value(successorGameState, nextAgent, nextDepth)
+
+            # currValue = min(currValue, successorScore)
+            if successorScore > currValue:
+                currValue = successorScore
+                currAction = action
+
+        return currValue, currAction
+        
+    def expValue(self, gameState, agentIndex, depth):
+        currValue, currAction = 0, None
+
+        nextAgent = (agentIndex + 1) % gameState.getNumAgents()
+        if nextAgent == 0:
+            nextDepth = depth - 1
+        else:
+            nextDepth = depth
+
+        legalActions = gameState.getLegalActions(agentIndex)
+        if len(legalActions) is not 0:
+            prob = 1.0 / len(legalActions)
+
+        for action in legalActions:
+            successorGameState = gameState.generateSuccessor(agentIndex, action)
+            successorScore, _ = self.value(successorGameState, nextAgent, nextDepth)
+
+            currValue += prob * successorScore
+            currAction = action
+
+        return currValue, currAction
         
     
 def betterEvaluationFunction(currentGameState):
@@ -292,7 +358,34 @@ def betterEvaluationFunction(currentGameState):
     DESCRIPTION: <write something here so we know what you did>
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    newPos = currentGameState.getPacmanPosition()
+    newFood = currentGameState.getFood()
+    newGhostStates = currentGameState.getGhostStates()
+
+    score = currentGameState.getScore()
+    
+    ghostValue = 10.0   
+    foodValue = 10.0
+    scaredGhostValue = 100.0  
+
+    minFoodDistance = math.inf
+    for food in newFood.asList():
+        minFoodDistance = min(minFoodDistance, manhattanDistance(newPos, food))
+
+    score = score + foodValue*(1/minFoodDistance)
+
+    for ghost in newGhostStates:
+        minGhostDistance = manhattanDistance(newPos, ghost.getPosition())
+        if minGhostDistance > 0:
+            if ghost.scaredTimer > 0:
+                score += scaredGhostValue+(1/minGhostDistance)
+            else:
+                score -= ghostValue+1/minGhostDistance
+        else:
+            return -math.inf
+        
+    return score
+
 
 # Abbreviation
 better = betterEvaluationFunction
