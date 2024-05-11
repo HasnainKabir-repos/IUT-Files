@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "90604f64-8ce7-44ee-9280-4b92ad08fa14",
+		"name": "LabFinalB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26299973"
+	},
+	"item": [
+		{
+			"name": "POST users/register 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Response status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"pm.test(\"Response contains a userId\", function () {",
+							"    var response = pm.response.json();",
+							"    pm.expect(response).to.have.property('id');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"hasnainkabir_102@user.com\",\r\n    \"password\":\"Hasnainkabir_102\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/register 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"pm.test(\"Response contains a userId\", function () {",
+							"    pm.expect(pm.response.json()).to.have.property('id');",
+							"});",
+							"",
+							"pm.collectionVariables.set(\"user1\", pm.response.json().id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"A Z Hasnain\",\r\n    \"last_name\":\"Kabir\",\r\n    \"email\":\"hasnainkabir_2@user.com\",\r\n    \"password\":\"Hasnainkabir_2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users/register 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains a userId\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('id');\r",
+							"});\r",
+							"\r",
+							"pm.collectionVariables.set(\"user2\", pm.response.json().id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Hasnain\",\r\n    \"last_name\":\"Kabir\",\r\n    \"address\":\"IUT\",\r\n    \"city\":\"Dhaka\",\r\n    \"phone\": \"01747116015\",\r\n    \"dob\":\"2002-05-05\",\r\n    \"password\":\"Super-secret123\",\r\n    \"email\":\"hasnainkabir_02@doe.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response contains an access_token\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('access_token');\r",
+							"});\r",
+							"pm.test(\"Save access_token in global variable\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.globals.set(\"access_token\", jsonData.access_token);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"hasnainkabir_2@user.com\",\r\n    \"password\":\"Hasnainkabir_2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users/{user1}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Success property in the response is true\", function () {",
+							"    pm.expect(pm.response.json().success).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Hasnain\",\r\n    \"last_name\":\"Kabir\",\r\n    \"address\":\"IUT\",\r\n    \"city\":\"Dhaka\",\r\n    \"country\":\"Bangladesh\",\r\n    \"phone\": \"01747116015\",\r\n    \"dob\":\"2002-05-05\",\r\n    \"password\":\"Super-secret123\",\r\n    \"email\":\"hasnainkabir_2@user.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/{{user1}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{user1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users/{{user2}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Success property in the response is true\", function () {\r",
+							"    pm.expect(pm.response.json().success).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Hasnain\",\r\n    \"last_name\":\"Kabir\",\r\n    \"address\":\"IUT\",\r\n    \"city\":\"Dhaka\",\r\n    \"country\":\"USA\",\r\n    \"phone\": \"01747116015\",\r\n    \"dob\":\"2002-05-05\",\r\n    \"password\":\"Super-secret123\",\r\n    \"email\":\"hasnainkabir_02@doe.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/{{user2}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{user2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/search hammer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"All returned products have 'hammer' in their name\", function () {",
+							"    const responseData = pm.response.json();",
+							"    const products = responseData.data;",
+							"   ",
+							"    products.forEach((product)=>{",
+							"      const productName = product.name.toLowerCase();",
+							"      pm.expect(productName).to.include('hammer', \"Product name should contain 'hammer'\");",
+							"    });",
+							"});",
+							"",
+							"",
+							"pm.test(\"Save any of the previous product ID as 'hammer' variable\", function () {",
+							"    const responseData = pm.response.json();",
+							"    const productId = responseData.data[0].id; ",
+							"    pm.collectionVariables.set(\"hammer\", productId);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products/search?q=hammer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "hammer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/products/search?q=pliers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Search for 'pliers' and check the count of returned products\", function () {",
+							"    var responseData = pm.response.json();",
+							"    pm.expect(responseData.data.length).to.equal(4);",
+							"    ",
+							"    responseData.data.forEach(function(product) {",
+							"        if (!product.in_stock) {",
+							"            pm.collectionVariables.set(\"out_plier\", JSON.stringify(product.id));",
+							"        }",
+							"    });",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/search?q=pliers",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "pliers"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/products/{{hammer}}/related",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"All related products have the same hammer category\", function () {",
+							"    var responseData = pm.response.json();",
+							"    var hammerCategory = responseData[0].category.name;",
+							"",
+							"    responseData.forEach(function(product) {",
+							"        pm.expect(product.category.name).to.equal(hammerCategory);",
+							"    });",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/{{hammer}}/related",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"{{hammer}}",
+						"related"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/carts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Save the cart ID as environment variable\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.collectionVariables.set(\"cartID\", jsonData.id);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/carts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/carts/{{cartID}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response message is 'item added or updated'\", function () {",
+							"  var responseMessage = pm.response.json().result;",
+							"  pm.expect(responseMessage).to.equal(\"item added or updated\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\":\"{{hammer}}\",\r\n    \"quantity\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/carts/{{cartID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"carts",
+						"{{cartID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/carts/{{cartID}} outplier",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response message is 'item added or updated'\", function () {\r",
+							"  var responseMessage = pm.response.json().message;\r",
+							"  pm.expect(responseMessage).to.equal(\"item added or updated\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\":{{out_plier}},\r\n    \"quantity\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/carts/{{cartID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"carts",
+						"{{cartID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user1",
+			"value": ""
+		},
+		{
+			"key": "user2",
+			"value": ""
+		},
+		{
+			"key": "hammer",
+			"value": ""
+		},
+		{
+			"key": "out_plier",
+			"value": ""
+		},
+		{
+			"key": "cartID",
+			"value": ""
+		}
+	]
+}
