@@ -1,0 +1,153 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[]{hyperref}
+
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amssymb}
+\begin{document}
+	\section{Modes}
+	mathematical equation
+	$ (a+b)^2 = \ a^2+2ab+b^2$
+	
+	\begin{math}
+		(a+b)^2 = a^2 + 2ab + b^2
+	\end{math}
+	
+	we can also write function as 
+	\begin{displaymath}
+		(a+b)^2 = a^2 + 2ab + b^2
+	\end{displaymath}
+	or with
+	
+	\begin{equation}
+		a + b = 2
+	\end{equation}
+	\begin{equation}
+		a + b = 2
+	\end{equation}
+	\begin{equation} \label{eqn:something}
+		a + b = 2
+	\end{equation}
+	
+	So for in \autoref{eqn:something} we have an equation and in \ref{eqn:something}
+	
+	\section{Superscript and Subscript}
+	\begin{equation}
+		x_i = 10	
+	\end{equation}
+	\begin{equation}
+		x^{2000}_{(i,j)} = 10
+	\end{equation}
+	\begin{equation}
+		1 + 2 = 5 -2 = 6/2 = 1.5 \times 2
+	\end{equation}
+	\begin{equation}
+		sin^2\theta + cos^2\theta = 1
+	\end{equation}
+	\begin{equation*}
+		\sin^2\theta + \cos^2\theta = \log10
+		\text{, This is a simple equation}
+	\end{equation*}
+	We can write $\frac{a}{b} = \frac{c}{d}$
+	\begin{equation}
+		\frac{a}{\frac{3}{6}} = \frac{c}{d}
+	\end{equation}
+	\begin{equation}
+		\sqrt{\frac{a}{b}} = \frac{1}{\sqrt{2}}
+	\end{equation}
+	\begin{equation}
+		\left[
+		\sqrt{\frac{a + 5 \times b}{\frac{2+c}{d}}} = \frac{1}{\sqrt{2}}
+		\right]
+	\end{equation}
+	
+	\section{Greek Alphabets}
+	\begin{equation}
+		\alpha \beta \gamma \delta \Gamma \Delta
+	\end{equation}
+	
+	\section{Calculus}
+	\begin{equation}
+		\lim_{x \rightarrow \infty} \frac{1}{x} = 0
+	\end{equation}
+	
+	\begin{equation}
+		\int_{10}^{200} x dx = 100
+	\end{equation}
+	\begin{equation}
+		\sum_{i=0}^{200} x_i = \prod_{i=0}^{200} (x_i + 1)
+	\end{equation}
+	
+	\section{Caligraphy}
+	\begin{equation}
+		\mathcal{ABCDEF}, \mathfrak{ABCDEF}, \mathbb{ABCDEF}
+	\end{equation}
+	
+	\section{Operators}
+	\begin{equation}
+		1 = 1 <5 > 2 \neq 4 \leq 8 \geq 16
+	\end{equation}
+	
+	\section{Sets and Vectors}
+	\begin{equation}
+		A \cup B \cup C \in \mathbb{R}
+	\end{equation}
+	\begin{equation}
+		\hat{i} \times \hat{j} = \hat{k}
+	\end{equation}
+	\begin{equation}
+		\vec{A} \cdot \vec{B} = \vec{C}
+	\end{equation}
+	
+	\begin{multline}
+		1 + 2 + 3 + 3 + 5 + 1 + 2 + 3 + \\
+		3 + 5 + 1 + 2 + 3 + 3 + 5 + 1 + \\
+		2 + 3 + 3 + 5 + 1 + 2 + 3 + 3 + \\
+		5 + 1 + 2 + 3 + 3 + 5 + 1 + 2 + \\
+		3 + 3 + 5 + 1 + 2 + 3 + 3 + 5 + ... = \infty
+	\end{multline}
+	\begin{equation}
+		\begin{split}
+			\frac{a}{b} &= \frac{5}{10} \\
+						&= \frac{1}{2} \\
+						&= 0.5
+		\end{split}
+	\end{equation}
+	
+	\begin{gather}
+		a + b + c = 5 \\
+		a = 10 \\
+		- 2b + 2c = -5
+	\end{gather}
+	
+	\section{Matrix}
+	\begin{equation*}
+		I = \begin{matrix}
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 0 & 1
+		\end{matrix}
+	\end{equation*}
+	\begin{equation*}
+		I = \begin{bmatrix}
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 0 & 1
+		\end{bmatrix}
+	\end{equation*}
+	\begin{equation*}
+		I = \begin{Bmatrix}
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 0 & 1
+		\end{Bmatrix}
+	\end{equation*}
+	\begin{equation*}
+		I = \begin{pmatrix}
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 0 & 1
+		\end{pmatrix}
+	\end{equation*}
+\end{document}
