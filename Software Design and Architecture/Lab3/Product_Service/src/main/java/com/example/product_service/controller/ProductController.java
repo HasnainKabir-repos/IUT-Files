@@ -21,9 +21,9 @@ public class ProductController {
         return productService.saveProduct(product);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Product findProductById(@PathVariable("id") String productId){
-        return productService.findProductById((productId));
+        return productService.findProductById(productId);
     }
 }
 

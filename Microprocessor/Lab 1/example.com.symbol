@@ -1,0 +1,16 @@
+< THE SYMBOL TABLE >  example.com  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+A                        	00102     	1         	VAR       	(NOSEG)   
+B                        	00103     	2         	VAR       	(NOSEG)   
+SUM                      	00105     	2         	VAR       	(NOSEG)   
+DIFFERENCE               	00107     	2         	VAR       	(NOSEG)   
+MULTIPLICATION           	00109     	2         	VAR       	(NOSEG)   
+DIVISION                 	0010B     	1         	VAR       	(NOSEG)   
+CODE                     	0010C     	-1        	LABEL     	(NOSEG)   
+MAIN                     	0010C     	-1        	NEAR      	(NOSEG)   
+===================================================================================================
+[ 4/1/2024  --  8:54:19 AM ] 
+< END >
+ 
