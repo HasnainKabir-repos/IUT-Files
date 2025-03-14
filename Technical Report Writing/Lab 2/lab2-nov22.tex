@@ -1,0 +1,163 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\usepackage{amsmath, amssymb}
+
+\title{CSE 4714 (SWE) 2024 Section B Lab 2}
+\author{Mohammad Ishrak Abedin}
+\date{November 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Modes}
+First of all, there are two modes. 
+
+\subsection{Inline math}
+We can write a mathematical expression as, $             (a + b)^2 =\qquad a^2 + 2ab + b^2 $. We can also write inline maths as \( (a + b)^2 = a^2 + 2ab + b^2 \). Or,
+\begin{math}
+    (a + b)^2 = a^2 + 2ab + b^2
+\end{math}.
+
+\subsection{Display Math} \label{ssec:displaymath}
+We can create display maths as, \[ (a + b)^2 = a^2 + 2ab + b^2 \] We can also write display maths with,
+\begin{displaymath}
+    (a + b)^2 = a^2 + 2ab + b^2
+\end{displaymath}
+Or, with,
+\begin{equation}
+    a + b = 2
+\end{equation}
+\begin{equation}
+    a + b = 2
+\end{equation}
+\begin{equation} \label{eqn:aplusbwholesquare}
+    (a + b)^2 = a^2 + 2ab + b^2
+\end{equation}
+
+In \autoref{ssec:displaymath}, in \autoref{eqn:aplusbwholesquare}, we can find the formula for a plus b whole square.
+
+\section{Subscript and Superscript}
+\begin{equation}
+    X^{2000}_{(i,j)} = 10
+\end{equation}
+
+\section{Math Operators}
+\begin{equation}
+    1 + 2 = 5 - 2 = 6 / 2 = 1.5 \times 2
+\end{equation}
+\begin{equation}
+    sin^2\theta + cos^2\theta = 1
+\end{equation}
+\begin{equation}
+    \sin^2\theta + \cos^2\theta = 1 = \log{10} \text{, this is a simple equation}
+\end{equation}
+
+We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$
+\begin{equation}
+    \frac{a}{b} = \frac{5}{10}
+\end{equation}
+
+
+$$\frac{a}{b} = \frac{5}{10}$$
+
+We can write, an inline equation, $\displaystyle \frac{a}{b} = \frac{5}{10}$. We can write, an inline equation,  $\displaystyle\frac{a}{b} = \frac{5}{10}$.We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$.We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$. We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$. We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$. We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$.We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$.We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$. We can write, an inline equation, $\frac{a}{b} = \frac{5}{10}$.
+
+
+\section{Brackets}
+\begin{equation}
+    \left.
+    \sqrt{\frac{ \frac{a + 5 \times 3}{ \frac{2}{3} } }{ \frac{2}{3} }} + 5 
+    \right\}
+    \times 3 = \frac{1}{ \sqrt{2} }
+\end{equation}
+
+\section{Greek Alphabets}
+\begin{equation}
+    \alpha A \beta B \gamma\Gamma\delta\Delta
+\end{equation}
+
+\section{Calculus}
+\begin{equation}
+    \lim_{x \rightarrow \infty} \frac{1}{x} = 0
+\end{equation}
+
+\begin{equation}
+    \int_{10}^{200} x dx = 500
+\end{equation}
+
+\begin{equation}
+    \int\limits_{10}^{200} x dx = 500
+\end{equation}
+
+\begin{equation}
+    \sum_{i = 10}^{200} x_i = 500 = \prod_{i = 10}^{200} x_i
+\end{equation}
+
+\section{Calligraphy}
+\begin{equation}
+    \mathcal{ABCDEF}, \mathfrak{ABCDEF}, \mathbb{ABCDEF}
+\end{equation}
+
+\section{Comparison Operators}
+\begin{equation}
+    1 = 1 < 5 > 2 \neq 4 \leq 5 \geq 3 \ngtr 5
+\end{equation}
+
+\section{Sets and Vectors}
+\begin{equation}
+    A \cup B \cap C \in \mathbb{R}
+\end{equation}
+\begin{equation}
+    \Vec{A} = \Vec{B}
+\end{equation}
+\begin{equation}
+    \hat{i} \times \hat{j} = \hat{k}
+\end{equation}
+\begin{equation}
+    \Vec{A} \cdot \Vec{B} = 5.32 
+\end{equation}
+
+\section{AMS Math Environments}
+\begin{equation*}
+    a + b = 3
+\end{equation*}
+
+\begin{multline}
+    1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + \\
+    1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + \\
+    1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + \\
+    1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + 1 + 2 + 3 + 4 + ... = \infty
+\end{multline}
+
+\begin{equation}
+    \begin{split}
+        \frac{a}{b} &= \frac{5}{10} \\
+                    &= \frac{1}{2}  \\
+                    &= 0.5
+    \end{split}
+\end{equation}
+
+\begin{align}
+    a + b + c &= 5 \\
+    a - 2b + 4c &= 15 \\
+    -5a - 2b + 7c &= -5
+\end{align}
+
+\begin{gather}
+    a + b + c = 5 \\
+    a = 15 \\
+    - 2b + 7c = -5
+\end{gather}
+
+\section{Matrices}
+\begin{equation*}
+    I = \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+    \end{bmatrix}
+\end{equation*}
+\end{document}

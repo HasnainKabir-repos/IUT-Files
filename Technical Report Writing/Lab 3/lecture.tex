@@ -1,0 +1,94 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{parskip}
+\usepackage{kantlipsum}
+
+
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{
+    {./figures/}
+}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{subcaption}
+
+\title{Lab 3 --- Inserting Images and Figures}
+\author{Mohammad Ishrak Abedin}
+\date{February 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+We can include a figure in the following way:
+
+\begin{flushright}
+    \includegraphics[width=0.5\textwidth, angle=45]{ImageA}
+\end{flushright}
+
+\kant[1-2] We can automatically refer to a figure as \ref{fig:b}. Or, we can automatically identify the type name using \autoref{fig:b}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{ImageC}
+    \caption{A letter `C'}
+    \label{fig:b}
+\end{figure}
+
+\kant[2-3]
+
+We can put images in any of the two sides. \kant[1]
+\begin{wrapfigure}{r}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{ImageB}
+    \caption{A right wrapped letter `B'}
+    \label{fig:bwrapped}
+\end{wrapfigure}
+
+\textbf{We can also left wrap.} \kant[3]
+
+\begin{wrapfigure}{l}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{ImageB}
+    \caption{A left wrapped letter `B'}
+    \label{fig:bwrappedl}
+\end{wrapfigure}
+
+\kant[4-5]
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{ImageA}
+        \caption{A letter `A'}
+        \label{fig:subA}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{ImageB}
+        \caption{A letter `B'}
+        \label{fig:subB}
+    \end{subfigure}
+
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{ImageC}
+        \caption{A letter `C'}
+        \label{fig:subC}
+    \end{subfigure}
+
+    \caption{A collection of letters}
+    \label{fig:collection}
+\end{figure}
+
+We can refer to a subfigure, like \autoref{fig:subA} or \ref{fig:subB}. Or we can refer to the whole container, \autoref{fig:collection}. 
+
+\kant[4-7]
+
+Look into other packages like side caption or packages for inserting tilted or rotated images (horizontal image) in a separate page.
+
+\end{document}

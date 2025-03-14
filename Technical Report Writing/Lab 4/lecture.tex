@@ -1,0 +1,372 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage{kantlipsum}
+\usepackage{hyperref}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\newcolumntype{C}{ >{\centering\arraybackslash} p }
+\newcolumntype{R}{ >{\raggedleft\arraybackslash} p }
+\newcolumntype{M}{ >{\centering\arraybackslash} m }
+
+%\setlength{\arrayrulewidth}{2pt}
+%\setlength{\tabcolsep}{15pt}
+%\renewcommand{\arraystretch}{1.5}
+
+\title{Lab 4 - Tables - Group B}
+\author{Mohammad Ishrak Abedin}
+\date{February 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\listoftables
+
+Hello, World!
+
+\begin{center}
+    \begin{tabular}{| c || l | C{0.4\textwidth} |}
+        \hline
+       \textit{cell 1}  & \textbf{cell 2} & \textbf{cell 3}  \\
+       \hline \hline
+       cell 4  & Why are you writing cell? & Yes \\ 
+       \hline
+       cell 4  & Why are you writing cell? & Repeating because I am lazy.\\
+       \hline
+       cell 4  & Why are you writing cell? & Repeating because I am lazy. \\
+       \hline
+       cell 4  & Why are you writing cell? & Repeating because I am lazy. \\
+       \hline
+       cell 4  & Why are you writing cell? & Repeating because I am lazy. \\
+       \hline
+       cell 4  & Why are you writing cell? & Repeating because I am lazy. \\
+       \hline
+       cell 4  & Why are you writing cell? & Repeating because I am lazy. \\
+       \hline
+    \end{tabular}
+\end{center}
+
+
+\kant[1]
+
+\begin{table}[htbp]
+    \centering
+    \caption{A simple table}
+    \begin{tabular}{|c|c|}
+        \hline
+        cell 1 & cell 2 \\
+        \hline
+        cell 3 & cell 4 \\ 
+        \hline
+    \end{tabular}
+    \label{tab:simple}
+\end{table}
+
+We can refer to our table with \ref{tab:simple} or \autoref{tab:simple}. \kant[2]
+
+\begin{table}[htbp]
+    \centering
+    \caption{Another simple table}
+    \begin{tabular}{|l|c|M{0.3\textwidth}|}
+        \hline
+        Header 1 & cell 2 & cell 3 \\[1em]
+        \hline
+        cell 3 & cell 4 & A long piece of text that will utilize a paragraph environment \\ 
+        \hline
+        cell 3 & cell 4 & A long piece of text that will utilize a paragraph environment \\ 
+        \hline
+        cell 3 & cell 4 & A long piece of text that will utilize a paragraph environment \\ 
+        \hline
+    \end{tabular}
+    \label{tab:simple2}
+\end{table}
+
+\kant[3]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{0.9\textwidth}{| c | X | >{\centering\arraybackslash} X |}
+        \hline
+        Header 1 & Header 2 & Header 3 \\
+        \hline
+        Cell 1 & Cell 2 & Cell 3 \\ 
+        \hline
+        Cell 1 & Cell 2 & Cell 3 \\ 
+        \hline
+        Cell 1 & Cell 2 & Cell 3 \\ 
+        \hline
+        Cell 1 & Cell 2 & Cell 3 \\ 
+        \hline
+    \end{tabularx}
+    \caption{A TabularX table}
+    \label{tab:tabx}
+\end{table}
+
+\kant[4]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{| *{5}{ c| }}
+        \hline
+        \multicolumn{3}{|r|}{Cell 1, 1 to 1, 3} & Cell 1, 4 & Cell 1, 5000 \\ \hline
+        \multirow{4}{*}{Cell 2,1 to 5,1} & Cell 2, 2 & Cell 2, 3 & Cell 2, 4 & \multicolumn{1}{r|}{Cell 2, 5} \\
+        \cline{2-5}
+         & Cell 3, 2 & Cell 3, 3 & Cell 3, 4 & Cell 3, 5 \\
+         \cline{2-5}
+         & \multicolumn{3}{c|}{\multirow{2}{*}{Cell 4, 2 -- 4, 4}}& Cell 4, 5 \\
+         \cline{5-5}
+         & \multicolumn{3}{c|}{} & Cell 5, 5 \\
+         \hline
+    \end{tabular}
+    \caption{A column-row merged table}
+    \label{tab:merged}
+\end{table}
+
+\kant[7]
+
+\begin{longtable}[c]{| c | c |}
+ \caption{Long table caption.\label{tab:long}}\\
+
+ \hline
+ \multicolumn{2}{| c |}{Begin of Table}\\
+ \hline
+ Something & something else on first page\\
+ \hline
+ \endfirsthead
+
+ \hline
+ \multicolumn{2}{|c|}{Continuation of Table \ref{tab:long}}\\
+ \hline
+ Something & something else\\
+ \hline
+ \endhead
+
+ \hline
+ \endfoot
+
+ \hline
+ \multicolumn{2}{| c |}{End of Table}\\
+ \hline\hline
+ \endlastfoot
+
+ Lots of lines & like this\\ \hline
+ Lots of lines & like this\\ \hline
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ \end{longtable}
+
+
+
+\kant[8]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{c c c}
+        \toprule
+       Header 1 & Header 2 & Header 3  \\
+       \midrule
+        Cell 1 & Cell 2 & Cell 3 \\ 
+        Cell 1 & Cell 2 & Cell 3 \\
+        \cmidrule{2-3}
+        Cell 1 & Cell 2 & Cell 3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{A booktabs table}
+    \label{tab:booktabs}
+\end{table}
+
+\end{document}

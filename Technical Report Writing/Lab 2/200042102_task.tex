@@ -1,0 +1,33 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+
+\title{Katugampola Fractional Derivative}
+\author{Student ID: 200042102}
+\date{February 20, 2025}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Derivation of Katugampola Fractional Derivative}
+	The Katugampola Fractional Derivative is a generalization of classical derivative as defined in \autoref{eq:1}
+	\begin{equation} \label{eq:1}
+		D^\alpha_a f(x) = \frac{1}{\Gamma(m-\alpha)} \frac{d^m}{dx^m} \int_{0}^{x} (x-t)^{m-\alpha-1} f(t) \, dt,
+	\end{equation}
+	where $m=\lceil a \rceil$ and $\alpha \in (0,1)$.
+	
+	\begin{equation} \label{eq:2}
+		I^\alpha_{0+} f(x) = \frac{1}{\Gamma(\alpha)} \int_{0}^{x} (x-t)^{\alpha-1} f(t) \, dt,
+	\end{equation}
+	with $0 < \alpha < 1$.
+	
+	\begin{equation} \label{eq:3}
+		D^\alpha_a f(x) = \frac{1}{\Gamma(m-\alpha)} \frac{d^m}{dx^m} \left(\frac{1}{\Gamma(\alpha)} \int_{0}^{x} (x-t)^{\alpha-1} f(t) \, dt \right).
+	\end{equation}
+	
+	\section{Conclusion}
+	Replicating references to (\ref{eq:1}),  (\ref{eq:2}),  (\ref{eq:3})
+	
+\end{document}
