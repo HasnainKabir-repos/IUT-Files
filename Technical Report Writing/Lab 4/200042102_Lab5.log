@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  6 MAR 2025 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  19 MAR 2025 17:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -341,7 +341,7 @@ Package pdftex.def Info: ImageA.png  used on input line 34.
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 45.
- [2 <./ImageA.png>]
+ [2 <./ImageA.png>] [3]
 (200042102_Lab5.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -351,21 +351,21 @@ Package rerunfilecheck Info: File `200042102_Lab5.out' has not changed.
 (rerunfilecheck)             Checksum: 0FEE3869AD994DCF103FB33319B2C339;209.
  ) 
 Here is how much of TeX's memory you used:
- 9094 strings out of 474436
- 141718 string characters out of 5748992
+ 9095 strings out of 474436
+ 141724 string characters out of 5748992
  1936190 words of memory out of 5000000
  31332 multiletter control sequences out of 15000+600000
  562933 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,10n,79p,891b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,12n,79p,891b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Installation_folder/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/
 Installation_folder/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Instal
 lation_folder/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Installation_
 folder/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Installation_folder/
 MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on 200042102_Lab5.pdf (2 pages, 92012 bytes).
+Output written on 200042102_Lab5.pdf (3 pages, 96314 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
+ 63 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  27 words of extra memory for PDF output out of 10000 (max. 10000000)
 

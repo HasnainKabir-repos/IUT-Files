@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{kantlipsum}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\usepackage[style=ieee, sorting=ydnt]{biblatex}
+
+\addbibresource{citations.bib}
+
+\title{Lab 5 - Bibliography - B}
+\author{Mohammad Ishrak Abedin}
+\date{March 2025}
+
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+Hello, World! We can cite to something with \cite{norman2013design}. We can refer to multiple works with \cite{rowling2015deathlyhollows, sadowski2018moderncodereview, wiki2025latex}.
+
+\textcite{sadowski2018moderncodereview} in their work discussed about the code review norms in Google. We can put citations in parenthesis with \parencite{rowling2015deathlyhollows}. We can cite something in footnote using \footcite{wiki2025latex}.
+
+\printbibliography[heading=bibintoc, title={Bibliography}]
+
+% \bibliographystyle{apalike}
+% \bibliography{citations}
+
+\end{document}

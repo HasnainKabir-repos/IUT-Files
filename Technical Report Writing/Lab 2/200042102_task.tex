@@ -24,7 +24,10 @@
 	with $0 < \alpha < 1$.
 	
 	\begin{equation} \label{eq:3}
-		D^\alpha_a f(x) = \frac{1}{\Gamma(m-\alpha)} \frac{d^m}{dx^m} \left(\frac{1}{\Gamma(\alpha)} \int_{0}^{x} (x-t)^{\alpha-1} f(t) \, dt \right).
+		\begin{split}
+			D^\alpha_a f(x) &= \frac{1}{\Gamma(m-\alpha)} \frac{d^m}{dx^m} \textit{I}^{\alpha}_{0+} f(x) \\
+			&= \frac{1}{\Gamma(m-\alpha)} \frac{d^m}{dx^m} \left(\frac{1}{\Gamma(\alpha)} \int_{0}^{x} (x-t)^{\alpha-1} f(t) \, dt \right).
+		\end{split}
 	\end{equation}
 	
 	\section{Conclusion}
